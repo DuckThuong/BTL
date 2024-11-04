@@ -1,0 +1,1117 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\css\\main.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\css\\normalize.min.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\css\\normalize.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\img\\logo.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\index.html",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\js\\custom.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\js\\jquery-1.11.0.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\js\\jquery-1.11.0.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\js\\jquery.nav.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\js\\jquery.nav.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shAutoloader.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shAutoloader.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushAS3.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushAS3.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushAppleScript.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushAppleScript.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushBash.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushBash.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushCSharp.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushCSharp.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushColdFusion.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushColdFusion.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushCpp.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushCpp.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushCss.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushCss.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushDelphi.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushDelphi.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushDiff.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushDiff.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushErlang.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushErlang.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushGroovy.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushGroovy.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushJScript.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushJScript.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushJava.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushJava.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushJavaFX.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushJavaFX.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushPerl.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushPerl.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushPhp.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushPhp.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushPlain.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushPlain.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushPowerShell.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushPowerShell.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushPython.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushPython.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushRuby.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushRuby.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushSass.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushSass.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushScala.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushScala.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushSql.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushSql.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushVb.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushVb.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushXml.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shBrushXml.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shLegacy.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\scripts\\shLegacy.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCore.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCore.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreDefault.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreDefault.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreDjango.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreDjango.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreEclipse.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreEclipse.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreEmacs.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreEmacs.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreFadeToGrey.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreFadeToGrey.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreMDUltra.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreMDUltra.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreMidnight.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreMidnight.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreRDark.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shCoreRDark.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeDefault.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeDefault.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeDjango.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeDjango.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeEclipse.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeEclipse.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeEmacs.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeEmacs.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeFadeToGrey.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeFadeToGrey.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeMDUltra.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeMDUltra.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeMidnight.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeMidnight.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeRDark.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\Doc\\syntax-highlighter\\styles\\shThemeRDark.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\about.html",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\about.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\animate.min.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\animated-headline.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\animated-headline.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\flaticon.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\flaticon.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\fontawesome-all.min.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\fontawesome-all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\gijgo.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\gijgo.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\hamburgers.min.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\hamburgers.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\main.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\nice-select.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\price_rangs.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\price_rangs.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\progressbar_barfiller.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\progressbar_barfiller.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\responsive.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\slick.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\slicknav.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\slicknav.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\style.map",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\style.map"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\css\\themify-icons.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\css\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\Flaticon.eot"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\Flaticon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\Flaticon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\Flaticon.woff"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\Flaticon.woff2",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\Flaticon.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\_flaticon.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\_flaticon.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\flaticon.css",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\flaticon.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\flaticon.html",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\flaticon.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\gijgo-material.eot",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\gijgo-material.eot"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\gijgo-material.svg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\gijgo-material.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\gijgo-material.ttf",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\gijgo-material.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\gijgo-material.woff",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\gijgo-material.woff"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\themify.eot"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\themify.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\fonts\\themify.woff"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\blog\\author.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\blog\\author.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\blog\\comment_1.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\blog\\comment_1.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\blog\\comment_2.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\blog\\comment_2.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\blog\\comment_3.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\blog\\comment_3.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\blog\\learn_about_bg.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\blog\\learn_about_bg.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\blog\\single_blog_1.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\blog\\single_blog_1.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\blog\\single_blog_2.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\blog\\single_blog_2.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\blog\\single_blog_3.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\blog\\single_blog_3.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\blog\\single_blog_4.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\blog\\single_blog_4.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\blog\\single_blog_5.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\blog\\single_blog_5.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\blog\\slide_thumb_1.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\blog\\slide_thumb_1.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\a.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\a2.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\a2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\d.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\disabled-check.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\disabled-check.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\disabled-radio.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\disabled-radio.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\f1.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\f1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\f2.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\f2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\f3.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\f3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\f4.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\f4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\f5.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\f5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\f6.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\f6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\f7.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\f7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\f8.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\f8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\g1.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\g1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\g2.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\g2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\g3.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\g3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\g4.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\g4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\g5.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\g5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\g6.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\g6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\g7.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\g7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\g8.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\g8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\primary-check.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\primary-check.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\primary-radio.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\primary-radio.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\success-check.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\success-check.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\elements\\success-radio.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\elements\\success-radio.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\favicon.ico",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\about2.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\about2.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\about3.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\about3.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\c++.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\c++.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\featured4.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\featured4.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\featured5.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\featured5.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\featured6.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\featured6.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\footer-bg.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\footer-bg.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\footer_bg.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\footer_bg.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\form.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\form.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\h1_hero2.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\h1_hero2.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\heart1.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\heart1.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\htmlcss.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\htmlcss.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\huy.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\huy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\javascript.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\javascript.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\khai.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\khai.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\logo2_footer.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\logo2_footer.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\lth.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\lth.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\nmh.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\nmh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\nmlt.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\nmlt.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\ptt.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\ptt.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\qutaion.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\qutaion.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\screen.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\screen.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\section-bg3.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\section-bg3.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\section_bg01.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\section_bg01.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\section_bg02.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\section_bg02.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\tdt.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\tdt.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\testimonail.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\testimonail.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\testimonial.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\testimonial.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\topic1.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\topic1.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\topic2.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\topic2.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\topic3.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\topic3.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\topic4.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\topic4.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\topic5.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\topic5.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\topic6.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\topic6.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\topic7.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\topic7.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\topic8.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\topic8.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\truong.jpg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\truong.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\gallery\\video-bg.svg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\gallery\\video-bg.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\hero\\h1_hero.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\hero\\h1_hero.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\hero\\hero2.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\hero\\hero2.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\hero\\screen.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\hero\\screen.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\icon\\about.svg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\icon\\about.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\icon\\icon1.svg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\icon\\icon1.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\icon\\icon2.svg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\icon\\icon2.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\icon\\icon3.svg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\icon\\icon3.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\icon\\right-icon.svg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\icon\\right-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\login-bg.mp4",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\login-bg.mp4"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\logo\\loder.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\logo\\loder.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\logo\\loder.svg",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\logo\\loder.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\logo\\logo.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\logo\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\logo\\logo2_footer.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\logo\\logo2_footer.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\post\\next.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\post\\next.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\post\\post_1.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\post\\post_1.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\post\\post_10.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\post\\post_10.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\post\\post_2.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\post\\post_2.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\post\\post_3.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\post\\post_3.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\post\\post_4.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\post\\post_4.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\post\\post_5.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\post\\post_5.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\post\\post_6.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\post\\post_6.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\post\\post_7.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\post\\post_7.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\post\\post_8.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\post\\post_8.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\post\\post_9.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\post\\post_9.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\post\\preview.png",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\img\\post\\preview.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\animated.headline.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\animated.headline.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\contact.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\contact.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\gijgo.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\gijgo.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\hover-direction-snake.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\hover-direction-snake.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\jquery.ajaxchimp.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\jquery.ajaxchimp.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\jquery.barfiller.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\jquery.barfiller.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\jquery.countdown.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\jquery.countdown.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\jquery.counterup.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\jquery.counterup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\jquery.form.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\jquery.form.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\jquery.magnific-popup.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\jquery.magnific-popup.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\jquery.paroller.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\jquery.paroller.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\jquery.slicknav.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\jquery.slicknav.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\jquery.sticky.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\jquery.sticky.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\jquery.vide.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\jquery.vide.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\mail-script.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\mail-script.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\one-page-nav-min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\one-page-nav-min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\plugins.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\price-range.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\price-range.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\vendor\\jquery-1.12.4.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\vendor\\jquery-1.12.4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\vendor\\modernizr-3.5.0.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\vendor\\modernizr-3.5.0.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\js\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_about.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_about.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_blog_page.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_blog_page.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_bradcam.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_bradcam.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_collaps.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_collaps.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_color.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_color.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_common.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_common.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_contact.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_contact.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_contact_form.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_contact_form.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_courses.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_courses.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_elements.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_elements.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_extend.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_extend.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_footer.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_h1-hero.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_h1-hero.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_headerMenu.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_headerMenu.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_load-balnceing.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_load-balnceing.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_login.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_login.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_overlay.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_overlay.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_services.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_services.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_services_section.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_services_section.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_team.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_team.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_testimonial.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_testimonial.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_top-sub.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_top-sub.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\_wantTowork.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\_wantTowork.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\assets\\scss\\style.scss"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\blog.html",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\blog.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\blog_details.html",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\blog_details.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\contact.html",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\contact.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\contact_process.php",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\contact_process.php"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\courses.html",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\courses.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\elements.html",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\elements.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\index.html",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\login.html",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\login.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\main.html",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\main.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\readme.txt",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\readme.txt"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\register.html",
+      "PackagePath": "staticwebassets\\courses-master\\courses-master\\register.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BTL.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BTL.props",
+      "PackagePath": "build\\BTL.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BTL.props",
+      "PackagePath": "buildMultiTargeting\\BTL.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BTL.props",
+      "PackagePath": "buildTransitive\\BTL.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
