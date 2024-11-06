@@ -1,4 +1,5 @@
 using BTL.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,9 @@ builder.Services.AddDbContext<WebNcContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("BTL"));
 });
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<WebNcContext>()
+    .AddDefaultTokenProviders();
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
