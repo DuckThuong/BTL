@@ -62,24 +62,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uXF9CYWlHaWFuZ1RpZXVCaWV1LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ADMIN/Desktop/WebNC/BTL/BTL/Views/Login/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ADMIN/Desktop/WebNC/BTL/BTL/Views/Login/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ADMIN/Desktop/WebNC/BTL/BTL/Views/Login/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ADMIN/Desktop/WebNC/BTL/BTL/Views/Login/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ADMIN/Desktop/WebNC/BTL/BTL/Views/Login/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+[C:/Users/ADMIN/Desktop/WebNC/BTL/BTL/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ADMIN/Desktop/WebNC/BTL/BTL/Views/Shared/Error.cshtml]
