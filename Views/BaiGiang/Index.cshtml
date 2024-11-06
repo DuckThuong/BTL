@@ -20,8 +20,8 @@
                                         <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
                                         <li class="breadcrumb-item"><a href="#">Bài giảng</a></li>
                                     </ol>
-                                    <form class="form-inline">
-                                        <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                                    <form class="form-inline" id="searchForm">
+                                        <input class="form-control mr-sm-2" type="search" name="query" id="searchQuery" placeholder="Tìm kiếm" aria-label="Search">
                                         <button class="btn btn-search btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
                                     </form>
                                 </nav>
@@ -118,6 +118,22 @@
                 if (page * pageSize >= @ViewBag.TotalCount) {
                     button.style.display = 'none';
                 }
+            });
+    });
+
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        var query = document.getElementById('searchQuery').value;
+        var pageSize = @ViewBag.PageSize;
+
+        fetch(`/BaiGiang/Index?query=${query}&pageSize=${pageSize}`)
+            .then(response => response.text())
+            .then(html => {
+                var parser = new DOMParser();
+                var doc = parser.parseFromString(html, 'text/html');
+                var newLectures = doc.querySelector('#lecture-list').innerHTML;
+                document.getElementById('lecture-list').innerHTML = newLectures;
             });
     });
 </script>

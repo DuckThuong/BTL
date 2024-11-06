@@ -9,38 +9,22 @@ using BTL.Data;
 
 namespace BTL.Controllers
 {
-    public class BaiGiangController : Controller
+    public class LoginController : Controller
     {
         private readonly WebNcContext _context;
 
-        public BaiGiangController(WebNcContext context)
+        public LoginController(WebNcContext context)
         {
             _context = context;
         }
 
-        // GET: BaiGiang
-        public async Task<IActionResult> Index(string query, int page = 1, int pageSize = 9)
+        // GET: Login
+        public async Task<IActionResult> Index()
         {
-            var lecturesQuery = _context.Lectures.AsQueryable();
-
-            if (!string.IsNullOrEmpty(query))
-            {
-                lecturesQuery = lecturesQuery.Where(l => l.LectureName.Contains(query) || l.Title.Contains(query));
-            }
-
-            var lectures = await lecturesQuery
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToListAsync();
-
-            ViewBag.Page = page;
-            ViewBag.PageSize = pageSize;
-            ViewBag.TotalCount = await lecturesQuery.CountAsync();
-
-            return View(lectures);
+            return View(await _context.Users.ToListAsync());
         }
 
-        // GET: BaiGiang/Details/5
+        // GET: Login/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -48,39 +32,39 @@ namespace BTL.Controllers
                 return NotFound();
             }
 
-            var lecture = await _context.Lectures
-                .FirstOrDefaultAsync(m => m.LectureId == id);
-            if (lecture == null)
+            var user = await _context.Users
+                .FirstOrDefaultAsync(m => m.UserId == id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return View(lecture);
+            return View(user);
         }
 
-        // GET: BaiGiang/Create
+        // GET: Login/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: BaiGiang/Create
+        // POST: Login/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("LectureId,LectureName,Image,Title,Content,VideoUrl,Rating,Views,CreatedAt,UpdatedAt")] Lecture lecture)
+        public async Task<IActionResult> Create([Bind("UserId,Username,PasswordHash,Email,FullName,Role,CreatedAt,UpdatedAt")] User user)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(lecture);
+                _context.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(lecture);
+            return View(user);
         }
 
-        // GET: BaiGiang/Edit/5
+        // GET: Login/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -88,22 +72,22 @@ namespace BTL.Controllers
                 return NotFound();
             }
 
-            var lecture = await _context.Lectures.FindAsync(id);
-            if (lecture == null)
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
             {
                 return NotFound();
             }
-            return View(lecture);
+            return View(user);
         }
 
-        // POST: BaiGiang/Edit/5
+        // POST: Login/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("LectureId,LectureName,Image,Title,Content,VideoUrl,Rating,Views,CreatedAt,UpdatedAt")] Lecture lecture)
+        public async Task<IActionResult> Edit(int id, [Bind("UserId,Username,PasswordHash,Email,FullName,Role,CreatedAt,UpdatedAt")] User user)
         {
-            if (id != lecture.LectureId)
+            if (id != user.UserId)
             {
                 return NotFound();
             }
@@ -112,12 +96,12 @@ namespace BTL.Controllers
             {
                 try
                 {
-                    _context.Update(lecture);
+                    _context.Update(user);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!LectureExists(lecture.LectureId))
+                    if (!UserExists(user.UserId))
                     {
                         return NotFound();
                     }
@@ -128,10 +112,10 @@ namespace BTL.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(lecture);
+            return View(user);
         }
 
-        // GET: BaiGiang/Delete/5
+        // GET: Login/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -139,34 +123,34 @@ namespace BTL.Controllers
                 return NotFound();
             }
 
-            var lecture = await _context.Lectures
-                .FirstOrDefaultAsync(m => m.LectureId == id);
-            if (lecture == null)
+            var user = await _context.Users
+                .FirstOrDefaultAsync(m => m.UserId == id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return View(lecture);
+            return View(user);
         }
 
-        // POST: BaiGiang/Delete/5
+        // POST: Login/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var lecture = await _context.Lectures.FindAsync(id);
-            if (lecture != null)
+            var user = await _context.Users.FindAsync(id);
+            if (user != null)
             {
-                _context.Lectures.Remove(lecture);
+                _context.Users.Remove(user);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool LectureExists(int id)
+        private bool UserExists(int id)
         {
-            return _context.Lectures.Any(e => e.LectureId == id);
+            return _context.Users.Any(e => e.UserId == id);
         }
     }
 }
