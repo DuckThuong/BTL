@@ -1,9 +1,9 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<BTL.Data.User>
+
 @{
     Layout = null;
 }
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -15,7 +15,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="~/courses-master/courses-master/assets/img/favicon.ico">
 
-    <!-- CSS here -->
+    <!-- CSS ở đây -->
     <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/slicknav.css">
@@ -32,56 +32,43 @@
     <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/style.css">
 </head>
 <body>
-    <!-- ? Preloader Start -->
-       <div id="preloader-active">
-           <div class="preloader d-flex align-items-center justify-content-center">
-               <div class="preloader-inner position-relative">
-                   <div class="preloader-circle"></div>
-                   <div class="preloader-img pere-text">
-                    <img src="/courses-master/courses-master/assets/img/logo/loder.png" alt="">
-                   </div>
-               </div>
-           </div>
-       </div> 
-    <!-- Preloader Start-->
-
 
     <main class="login-body" data-vide-bg="/courses-master/courses-master/assets/img/login-bg.mp4">
-        <!-- Login Admin -->
-        <form class="form-default" action="/Login/Login" method="POST">
+        <form class="form-default" action="/SignIn/Register" method="POST" id="registerForm">
 
             <div class="login-form">
-                <!-- logo-login -->
                 <div class="logo-login">
                     <a href="index.html"><img src="/courses-master/courses-master/assets/img/logo/loder.png" alt=""></a>
                 </div>
-                <h2>Đăng nhập</h2>
+                <h2>Đăng ký tại đây</h2>
+
                 <div class="form-input">
-                    <label for="email">Email</label>
-                    <input type="email" name="Email" placeholder="Email" required>
+                    <label for="FullName">Họ và tên</label>
+                    <input type="text" name="FullName" placeholder="Họ và tên">
                 </div>
                 <div class="form-input">
-                    <label for="password">Password</label>
-                    <input type="password" name="PasswordHash" placeholder="Password" required>
+                    <label for="Email">Địa chỉ Email</label>
+                    <input type="email" name="Email" placeholder="Địa chỉ Email">
+                </div>
+                <div class="form-input">
+                    <label for="PasswordHash">Mật khẩu</label>
+                    <input type="password" name="PasswordHash" placeholder="Mật khẩu">
+                </div>
+                <div class="form-input">
+                    <label for="confirmPassword">Xác nhận Mật khẩu</label>
+                    <input type="password" name="confirmPassword" placeholder="Xác nhận Mật khẩu">
                 </div>
                 <div class="form-input pt-30">
-                    <input type="submit" name="submit" value="login">
+                    <input type="submit" name="submit" value="Đăng ký">
                 </div>
-
-                <!-- Forget Password -->
-                <a href="#" class="forget" style="text-decoration: none;">
-                    <i class="fas fa-key"></i> Quên mật khẩu
-                </a>
-                <!-- Forget Password -->
-                <a href="/SignIn/Index" class="registration" style="text-decoration: none;">
-                <i class="fas fa-user-plus"></i> 
-                    Đăng kí tài khoản ngay! 
+                <!-- Quên Mật khẩu -->
+                <a href="/Login/Login" class="registration" style="text-decoration: none;">
+                    <i class="fas fa-arrow-left"></i> Quay lại trang đăng nhập
                 </a>
             </div>
         </form>
+        <!-- /kết thúc form đăng nhập -->
     </main>
-
-
     <script src="~/courses-master/courses-master/assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="~/courses-master/courses-master/assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -125,36 +112,32 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="~/courses-master/courses-master/assets/js/plugins.js"></script>
     <script src="~/courses-master/courses-master/assets/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#registerForm').on('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
 
-@*      <script>
-         document.getElementById('loginForm').addEventListener('submit', function(event) {
-             event.preventDefault(); 
+                var formData = {
+                    FullName: $('input[name="FullName"]').val(),
+                    Email: $('input[name="Email"]').val(),
+                    PasswordHash: $('input[name="PasswordHash"]').val(),
+                };
 
-             var formData = new FormData(this);
-
-             fetch('/Login/Login', {
-                 method: 'POST',
-                 body: formData
-             })
-             .then(response => {
-                 if (!response.ok) {
-                     throw new Error('Không thể tìm thấy dữ liệu');
-                 }
-                 return response.json();
-             })
-             .then(data => {
-                 console.log('Server response:', data);
-                 if (data.success) {
-                     window.location.href = '/Home/Index'; 
-                 } else {
-                     alert('Không thể đăng nhập !!: ' + data.message);
-                 }
-             })
-             .catch(error => {
-                 console.error('Error:', error);
-             });
-         });
-     </script>
- *@
+                $.ajax({
+                    url: '/SignIn/Register', 
+                    type: 'POST',
+                    data: formData,
+                    success: function(response) {
+                        alert('Đăng kí thành công!');
+                        window.location.href = '/Login/Login';
+                    },
+                    error: function(xhr, status, error) {
+                        
+                        alert('Đăng kí thất bại: ' + error);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
