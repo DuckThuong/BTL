@@ -29,57 +29,60 @@ namespace BTL.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(User model, string fullName, string email, string passwordHash, string confirmPassword)
         {
-            if (ModelState.IsValid)
+            if (passwordHash != confirmPassword)
             {
-                if (passwordHash != confirmPassword)
-                {
-                    return Json(new { success = false, message = "Mật khẩu không khớp.", errorCode = "PASSWORD_MISMATCH" });
-                }
-
-                if (passwordHash.Length < 8)
-                {
-                    return Json(new { success = false, message = "Mật khẩu phải có ít nhất 8 ký tự.", errorCode = "PASSWORD_TOO_SHORT" });
-                }
-
-                if (!passwordHash.Any(char.IsDigit))
-                {
-                    return Json(new { success = false, message = "Mật khẩu phải chứa ít nhất một chữ số.", errorCode = "PASSWORD_NO_DIGIT" });
-                }
-
-                if (!passwordHash.Any(char.IsUpper))
-                {
-                    return Json(new { success = false, message = "Mật khẩu phải chứa ít nhất một chữ hoa.", errorCode = "PASSWORD_NO_UPPERCASE" });
-                }
-
-                var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
-                if (existingUser != null)
-                {
-                    return Json(new { success = false, message = "Email đã tồn tại.", errorCode = "USER_EXISTS" });
-                }
-                try
-                {
-                    var user = new User
-                    {
-                        FullName = fullName,
-                        Email = email,
-                        PasswordHash = passwordHash,
-                        Username = fullName,
-                        Role = "Student",
-                        CreatedAt = DateTime.Now,
-                        UpdatedAt = DateTime.Now
-                    };
-                    _context.Users.Add(user);
-                    await _context.SaveChangesAsync();
-
-                    return Json(new { success = true, message = "Đăng ký thành công.", userId = user.UserId });
-                }
-                catch (Exception ex)
-                {
-                    return Json(new { success = false, message = "Đăng kí thất bại", error = ex.Message });
-                }
+                return Json(new { success = false, message = "Mật khẩu không khớp.", errorCode = "PASSWORD_MISMATCH" });
             }
-            return Json(new { success = false, message = "Dữ liệu không hợp lệ.", errorCode = "INVALID_DATA" });
+
+            if (passwordHash.Length < 8)
+            {
+                return Json(new { success = false, message = "Mật khẩu phải có ít nhất 8 ký tự.", errorCode = "PASSWORD_TOO_SHORT" });
+            }
+
+            if (!passwordHash.Any(char.IsDigit))
+            {
+                return Json(new { success = false, message = "Mật khẩu phải chứa ít nhất một chữ số.", errorCode = "PASSWORD_NO_DIGIT" });
+            }
+
+            if (!passwordHash.Any(char.IsUpper))
+            {
+                return Json(new { success = false, message = "Mật khẩu phải chứa ít nhất một chữ hoa.", errorCode = "PASSWORD_NO_UPPERCASE" });
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return Json(new { success = false, message = "Dữ liệu không hợp lệ.", errorCode = "INVALID_DATA" });
+            }
+
+            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (existingUser != null)
+            {
+                return Json(new { success = false, message = "Email đã tồn tại.", errorCode = "USER_EXISTS" });
+            }
+
+            try
+            {
+                var user = new User
+                {
+                    FullName = fullName,
+                    Email = email,
+                    PasswordHash = passwordHash,
+                    Username = fullName,
+                    Role = "Student",
+                    CreatedAt = DateTime.Now,
+                    UpdatedAt = DateTime.Now
+                };
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
+
+                return Json(new { success = true, message = "Đăng ký thành công.", userId = user.UserId });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = "Đăng kí thất bại", error = ex.Message });
+            }
         }
+
 
         public static string GetMD5(string str)
         {
