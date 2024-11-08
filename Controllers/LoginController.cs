@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BTL.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Claims;
 
 namespace BTL.Controllers
 {
@@ -49,10 +53,25 @@ namespace BTL.Controllers
                 ModelState.AddModelError(string.Empty, "Không thể đăng nhập");
                 return View("Login");
             }
-            HttpContext.Session.SetString("UserEmail", user.Email);
-            HttpContext.Session.SetString("UserPasswordHash", user.PasswordHash);
 
-            return RedirectToAction("Index", "Home"); // Redirect to Home/Index on success
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, user.Email),
+                new Claim("UserId", user.UserId.ToString())
+            };
+
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

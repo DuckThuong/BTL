@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BTL.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BTL.Controllers
-{
+{   
+    [Authorize]
     public class BaiGiangController : Controller
     {
         private readonly WebNcContext _context;
@@ -49,6 +51,8 @@ namespace BTL.Controllers
             }
 
             var lecture = await _context.Lectures
+                .Include(l => l.LectureReviews)
+                    .ThenInclude(r => r.User)
                 .FirstOrDefaultAsync(m => m.LectureId == id);
             if (lecture == null)
             {
@@ -178,10 +182,19 @@ namespace BTL.Controllers
                 return Json(new { success = false, message = "Lecture not found" });
             }
 
-            // Update the rating and review count
-            lecture.ReviewCount += 1;
-            lecture.Rating = ((lecture.Rating * (lecture.ReviewCount - 1)) + request.NewRating) / lecture.ReviewCount;
+            lecture.ReviewCount = (lecture.ReviewCount ?? 0) + 1;
+            lecture.Rating = ((lecture.Rating ?? 0) * (lecture.ReviewCount - 1) + request.NewRating) / lecture.ReviewCount;
+            var review = new LectureReview
+            {
+                LectureId = request.Id,
+                UserId = HttpContext.Session.GetInt32("UserId") ?? 3,
+                Rating = request.NewRating,
+                Comment = request.ReviewContent,
+                CreatedAt = DateTime.Parse(request.Timestamp),
+                UpdatedAt = DateTime.Parse(request.Timestamp)
+            };
 
+            _context.LectureReviews.Add(review);
             _context.Update(lecture);
             await _context.SaveChangesAsync();
 
@@ -192,6 +205,8 @@ namespace BTL.Controllers
         {
             public int Id { get; set; }
             public int NewRating { get; set; }
+            public string ReviewContent { get; set; }
+            public string Timestamp { get; set; }
         }
     }
 }
