@@ -21,7 +21,7 @@ namespace BTL.Controllers
         // GET: BaiGiang
         public async Task<IActionResult> Index(string query, int page = 1, int pageSize = 9)
         {
-            var lecturesQuery = _context.Lectures.AsQueryable();
+            var lecturesQuery = _context.Lectures.Include(l => l.Course).AsQueryable();
 
             if (!string.IsNullOrEmpty(query))
             {

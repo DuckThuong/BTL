@@ -25,7 +25,13 @@ public partial class Lecture
 
     public string? CourseInfo { get; set; }
 
+    public int? CourseId { get; set; }
+
     public DateTime? CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
+
+    public virtual Course? Course { get; set; }
+
+    public virtual ICollection<LectureReview> LectureReviews { get; set; } = new List<LectureReview>();
 }

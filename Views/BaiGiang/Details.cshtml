@@ -46,7 +46,7 @@
                         <div class="row">
                             <div class="col-xl-8 col-lg-11 col-md-12">
                                 <div class="hero__caption hero__caption2">
-                                    <h1 data-animation="bounceIn" data-delay="0.2s">Bài giảng</h1>
+                                    <h1 data-animation="bounceIn" data-delay="0.2s" style="width: fit-content;">@Model.LectureName</h1>
                                     <!-- breadcrumb Start-->
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
@@ -136,7 +136,8 @@
                                         </div>
                                         <div class="modal-body">
                                             Bạn muốn đánh giá bài giảng này 
-                                            <input type="number" id="selectedRatingInput" min="1" max="5" value="0" onchange="updateSelectedRating(this.value)" />
+                                            <input type="number" id="selectedRatingInput" min="1" max="5" value="0" 
+                                                   onchange="if (this.value > 5) this.value = 5; updateSelectedRating(this.value)" />
                                             sao?
                                             <div class="form-group mt-3">
                                                 <label for="userReview">Đánh giá của bạn: </label>
