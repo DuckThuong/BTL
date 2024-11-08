@@ -10,7 +10,7 @@
                 </div>
                 <div class="properties__caption">
                     <p>Bài giảng</p>
-                    <h3><a href="#">@lecture.LectureName</a></h3>
+                    <h3><a asp-action="Details" asp-route-id="@lecture.LectureId">@lecture.LectureName</a></h3>
                     <p>@lecture.CourseInfo</p>
                     <div class="properties__footer d-flex justify-content-between align-items-center">
                         <div class="restaurant-name">
@@ -27,7 +27,7 @@
                             <p><span>({@lecture.Rating})</span> based on @lecture.ReviewCount</p>
                         </div>
                     </div>
-                    <a href="#" class="border-btn border-btn2">Xem chi tiết</a>
+                    <a asp-action="Details" asp-route-id="@lecture.LectureId" class="border-btn border-btn2">Xem chi tiết</a>
                 </div>
             </div>
         </div>

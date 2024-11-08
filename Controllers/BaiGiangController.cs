@@ -168,5 +168,30 @@ namespace BTL.Controllers
         {
             return _context.Lectures.Any(e => e.LectureId == id);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Rate([FromBody] RatingRequest request)
+        {
+            var lecture = await _context.Lectures.FindAsync(request.Id);
+            if (lecture == null)
+            {
+                return Json(new { success = false, message = "Lecture not found" });
+            }
+
+            // Update the rating and review count
+            lecture.ReviewCount += 1;
+            lecture.Rating = ((lecture.Rating * (lecture.ReviewCount - 1)) + request.NewRating) / lecture.ReviewCount;
+
+            _context.Update(lecture);
+            await _context.SaveChangesAsync();
+
+            return Json(new { success = true });
+        }
+
+        public class RatingRequest
+        {
+            public int Id { get; set; }
+            public int NewRating { get; set; }
+        }
     }
 }

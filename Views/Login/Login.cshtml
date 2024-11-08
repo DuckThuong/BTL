@@ -48,7 +48,7 @@
 
     <main class="login-body" data-vide-bg="/courses-master/courses-master/assets/img/login-bg.mp4">
         <!-- Login Admin -->
-        <form id="loginForm" class="form-default" action="login-bg.mp4" method="POST">
+        <form class="form-default" action="/Login/Login" method="POST">
 
             <div class="login-form">
                 <!-- logo-login -->
@@ -57,15 +57,15 @@
                 </div>
                 <h2>Đăng nhập</h2>
                 <div class="form-input">
-                    <label for="name">Tài khoản</label>
-                    <input type="email" name="email" placeholder="Email@gmail.com">
+                    <label for="email">Email</label>
+                    <input type="email" name="Email" placeholder="Email" required>
                 </div>
                 <div class="form-input">
-                    <label for="name">Mật khẩu</label>
-                    <input type="password" name="password" placeholder="Mật khẩu">
+                    <label for="password">Password</label>
+                    <input type="password" name="PasswordHash" placeholder="Password" required>
                 </div>
                 <div class="form-input pt-30">
-                    <input type="submit" id="loginButton" name="submit" value="Đăng nhập">
+                    <input type="submit" name="submit" value="login">
                 </div>
 
                 <!-- Forget Password -->
@@ -121,37 +121,35 @@
     <script src="~/courses-master/courses-master/assets/js/plugins.js"></script>
     <script src="~/courses-master/courses-master/assets/js/main.js"></script>
 
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); 
+@*      <script>
+         document.getElementById('loginForm').addEventListener('submit', function(event) {
+             event.preventDefault(); 
 
-            var formData = new FormData(this);
+             var formData = new FormData(this);
 
-            fetch('/Login/Login', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Không thể tìm thấy dữ liệu');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Server response:', data);
-                if (data.success) {
-                    alert('Đăng nhập thành công!');
-                    window.location.href = '/Home/Index'; 
-                } else {
-                    alert('Không thể đăng nhập !!: ' + data.message);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Đã xảy ra lỗi khi kết nối với server.');
-            });
-        });
-    </script>
-
+             fetch('/Login/Login', {
+                 method: 'POST',
+                 body: formData
+             })
+             .then(response => {
+                 if (!response.ok) {
+                     throw new Error('Không thể tìm thấy dữ liệu');
+                 }
+                 return response.json();
+             })
+             .then(data => {
+                 console.log('Server response:', data);
+                 if (data.success) {
+                     window.location.href = '/Home/Index'; 
+                 } else {
+                     alert('Không thể đăng nhập !!: ' + data.message);
+                 }
+             })
+             .catch(error => {
+                 console.error('Error:', error);
+             });
+         });
+     </script>
+ *@
 </body>
 </html>

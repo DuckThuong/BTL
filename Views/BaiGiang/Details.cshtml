@@ -4,69 +4,241 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>E_Learning | Education</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="~/courses-master/courses-master/site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="~/courses-master/courses-master/courses-master/courses-master/assets/img/favicon.ico">
 
-<div>
-    <h4>Lecture</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LectureName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LectureName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Image)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Content)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Content)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.VideoUrl)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.VideoUrl)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Rating)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Rating)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Views)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Views)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedAt)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreatedAt)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpdatedAt)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpdatedAt)
-        </dd>
-    </dl>
+    <!-- CSS here -->
+
+    <link rel="stylesheet" href="~/courses-master/courses-master/courses-master/courses-master/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/courses-master/courses-master/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/courses-master/courses-master/assets/css/slicknav.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/courses-master/courses-master/assets/css/flaticon.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/courses-master/courses-master/assets/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/courses-master/courses-master/assets/css/gijgo.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/courses-master/courses-master/assets/css/animate.min.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/courses-master/courses-master/assets/css/animated-headline.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/courses-master/courses-master/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/courses-master/courses-master/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/courses-master/courses-master/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/courses-master/courses-master/assets/css/slick.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/courses-master/courses-master/assets/css/nice-select.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/courses-master/courses-master/assets/css/style.css">
+    <!--End Css-->
+
+</head>
+<body>
+
+    <main>
+        <!--? slider Area Start-->
+        <section class="slider-area slider-area2">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-11 col-md-12">
+                                <div class="hero__caption hero__caption2">
+                                    <h1 data-animation="bounceIn" data-delay="0.2s">Bài giảng</h1>
+                                    <!-- breadcrumb Start-->
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="~/Home/Index">Trang chủ</a></li>
+                                        <li class="breadcrumb-item"><a href="/BaiGiang/Index">Bài giảng</a></li>
+                                        <li class="breadcrumb-item"><a href="/BaiGiang/Index">Chi tiết bài giảng</a></li> 
+                                        </ol>
+                                    </nav>
+                                    <!-- breadcrumb End -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>          
+                </div>
+            </div>
+        </section>
+        <!--? About Area-1 Start -->
+        <section  class="about-area1 fix pt-100 pb-100">
+            <div class="support-wrapper align-items-center">
+                <div class="left-content1">
+                    <div class="section-tittle section-tittle2 mb-55">
+                        <div class="front-text">
+                            <img style="width: 200px; height: auto; margin-bottom: 30px" class="about-img" src="@Model.Image" alt="@Model.LectureName" />
+                            <h2 class="">@Model.LectureName</h2>
+                        </div>
+                    </div>
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/courses-master/courses-master/assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>@Model.Title</p>
+                        </div>
+                    </div>
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/courses-master/courses-master/assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>@Model.Content</p>
+                        </div>
+                    </div>
+
+                   
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/courses-master/courses-master/assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Ngày đăng: @Model.CreatedAt</p>
+                        </div>
+                    </div>      
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/courses-master/courses-master/assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Chỉnh sửa gần nhất: @Model.UpdatedAt</p>
+                        </div>
+                    </div>  
+                     <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/courses-master/courses-master/assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <div class="restaurant-name">
+                            <div class="rating">
+                                @for (int i = 0; i < Math.Floor(Model.Rating ?? 0); i++)
+                                {
+                                    <i class="fas fa-star"></i>
+                                }
+                                @if (Model.Rating % 1 != 0)
+                                {
+                                    <i class="fas fa-star-half"></i>
+                                }
+                                    <button onclick="openRatingModal()" data-toggle="modal" data-target="#ratingModal">Đánh giá</button>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="ratingModal" tabindex="-1" role="dialog" aria-labelledby="ratingModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="ratingModalLabel">Đánh giá bài giảng</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Bạn muốn đánh giá bài giảng này 
+                                            <input type="number" id="selectedRatingInput" min="1" max="5" value="0" onchange="updateSelectedRating(this.value)" />
+                                            sao?
+                                            <div class="form-group mt-3">
+                                                <label for="userReview">Đánh giá của bạn: </label>
+                                                <textarea class="form-control" id="userReview" rows="3" placeholder="Nhập đánh giá"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
+                                            <button type="button" class="btn btn-primary" onclick="submitRating()">Đánh giá</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p><span>@Model.Rating</span> based on @Model.ReviewCount</p>
+                        </div>
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="right-content1">
+                    <!-- img -->
+                    <div class="right-img">
+                        <img src="~/courses-master/courses-master/assets/img/gallery/about.png" alt="">
+
+                        <div class="video-icon">
+                            <a class="popup-video btn-icon" href="@Model.VideoUrl"><i class="fas fa-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Area End -->
+    </main>
+  <!-- Scroll Up -->
+  <div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.LectureId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+<script src="~/courses-master/courses-master/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="~/courses-master/courses-master/assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="~/courses-master/courses-master/assets/js/popper.min.js"></script>
+<script src="~/courses-master/courses-master/assets/js/bootstrap.min.js"></script>
+<script src="~/courses-master/courses-master/assets/js/jquery.slicknav.min.js"></script>
+
+<script src="~/courses-master/courses-master/assets/js/owl.carousel.min.js"></script>
+<script src="~/courses-master/courses-master/assets/js/slick.min.js"></script>
+<script src="~/courses-master/courses-master/assets/js/wow.min.js"></script>
+<script src="~/courses-master/courses-master/assets/js/animated.headline.js"></script>
+<script src="~/courses-master/courses-master/assets/js/jquery.magnific-popup.js"></script>
+
+<script src="~/courses-master/courses-master/assets/js/gijgo.min.js"></script>
+<script src="~/courses-master/courses-master/assets/js/jquery.nice-select.min.js"></script>
+<script src="~/courses-master/courses-master/assets/js/jquery.sticky.js"></script>
+<script src="~/courses-master/courses-master/assets/js/jquery.barfiller.js"></script>
+
+<script src="~/courses-master/courses-master/assets/js/jquery.counterup.min.js"></script>
+<script src="~/courses-master/courses-master/assets/js/waypoints.min.js"></script>
+<script src="~/courses-master/courses-master/assets/js/jquery.countdown.min.js"></script>
+<script src="~/courses-master/courses-master/assets/js/hover-direction-snake.min.js"></script>
+
+<script src="~/courses-master/courses-master/assets/js/contact.js"></script>
+<script src="~/courses-master/courses-master/assets/js/jquery.form.js"></script>
+<script src="~/courses-master/courses-master/assets/js/jquery.validate.min.js"></script>
+<script src="~/courses-master/courses-master/assets/js/mail-script.js"></script>
+<script src="~/courses-master/courses-master/assets/js/jquery.ajaxchimp.min.js"></script>
+
+<script src="~/courses-master/courses-master/assets/js/plugins.js"></script>
+<script src="~/courses-master/courses-master/assets/js/main.js"></script>
+
+<script>
+    let selectedRating = 0;
+
+    function openRatingModal(rating) {
+        selectedRating = rating;
+        document.getElementById('selectedRatingInput').value = rating;
+        $('#ratingModal').modal('show');
+    }
+
+    function updateSelectedRating(value) {
+        selectedRating = parseInt(value, 10);
+    }
+
+    function submitRating() {
+        fetch('/BaiGiang/Rate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'RequestVerificationToken': '@Html.AntiForgeryToken()'
+            },
+            body: JSON.stringify({ id: @Model.LectureId, newRating: selectedRating })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                alert('Failed to submit rating');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+</script>
+
+</body>
+</html>

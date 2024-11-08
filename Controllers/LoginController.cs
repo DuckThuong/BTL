@@ -15,39 +15,44 @@ namespace BTL.Controllers
         private readonly WebNcContext _context;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
+
         public LoginController(WebNcContext context, SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager)
         {
             _context = context;
             _signInManager = signInManager;
             _userManager = userManager;
         }
+
         [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> Login(User model)
         {
-            //if (!ModelState.IsValid)
-                //return Json(new { success = false, message = "Dữ liệu không hợp lệ" });
+            if (!ModelState.IsValid)
+                return View("Login");
 
-            var user = await _userManager.FindByNameAsync(model.Email);
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Email == model.Email);
+
             if (user == null)
             {
-                return Json(new { success = false, message = "Không tìm thấy tài khoản" });
+                ModelState.AddModelError(string.Empty, "Không tìm thấy tài khoản");
+                return View("Login");
             }
 
-            var result = await _signInManager.CheckPasswordSignInAsync(user, model.PasswordHash, lockoutOnFailure: false);
-
-            if (result.Succeeded)
+            if (user.PasswordHash != model.PasswordHash) 
             {
-                await _signInManager.SignInAsync(user, isPersistent: false);
-                return Json(new { success = true });
+                ModelState.AddModelError(string.Empty, "Không thể đăng nhập");
+                return View("Login");
             }
+            HttpContext.Session.SetString("UserEmail", user.Email);
+            HttpContext.Session.SetString("UserPasswordHash", user.PasswordHash);
 
-            return Json(new { success = false, message = "Không thể đăng nhập" });
+            return RedirectToAction("Index", "Home"); // Redirect to Home/Index on success
         }
-       
     }
 }
