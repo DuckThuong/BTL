@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BTL.Data;
+using System.Text;
+using System.Security.Cryptography;
 
 namespace BTL.Controllers
 {
@@ -29,37 +31,71 @@ namespace BTL.Controllers
         {
             if (ModelState.IsValid)
             {
-
-                var existingUser = await _context.Users
-                    .FirstOrDefaultAsync(u => u.Email == model.Email);
-
-                if (existingUser != null)
+                if (passwordHash != confirmPassword)
                 {
-                    return Json(new { success = false, message = "Email đã tồn tại." });
+                    return Json(new { success = false, message = "Mật khẩu không khớp.", errorCode = "PASSWORD_MISMATCH" });
                 }
 
-                var nameParts = fullName.Split(' ');
-                var userName = string.Join(' ', nameParts.Skip(1));
-
-                var user = new User
+                if (passwordHash.Length < 8)
                 {
-                    FullName = fullName,
-                    Email = email,
-                    PasswordHash = passwordHash,
-                    Username = userName,
-                    Role = "Student",
-                    CreatedAt = DateTime.Now,
-                    UpdatedAt = DateTime.Now
-                };
+                    return Json(new { success = false, message = "Mật khẩu phải có ít nhất 8 ký tự.", errorCode = "PASSWORD_TOO_SHORT" });
+                }
 
-                _context.Users.Add(user);
-                await _context.SaveChangesAsync();
+                if (!passwordHash.Any(char.IsDigit))
+                {
+                    return Json(new { success = false, message = "Mật khẩu phải chứa ít nhất một chữ số.", errorCode = "PASSWORD_NO_DIGIT" });
+                }
 
-                return Json(new { success = true, message = "Đăng ký thành công." });
+                if (!passwordHash.Any(char.IsUpper))
+                {
+                    return Json(new { success = false, message = "Mật khẩu phải chứa ít nhất một chữ hoa.", errorCode = "PASSWORD_NO_UPPERCASE" });
+                }
+
+                var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+                if (existingUser != null)
+                {
+                    return Json(new { success = false, message = "Email đã tồn tại.", errorCode = "USER_EXISTS" });
+                }
+                try
+                {
+                    var user = new User
+                    {
+                        FullName = fullName,
+                        Email = email,
+                        PasswordHash = passwordHash,
+                        Username = fullName,
+                        Role = "Student",
+                        CreatedAt = DateTime.Now,
+                        UpdatedAt = DateTime.Now
+                    };
+                    _context.Users.Add(user);
+                    await _context.SaveChangesAsync();
+
+                    return Json(new { success = true, message = "Đăng ký thành công.", userId = user.UserId });
+                }
+                catch (Exception ex)
+                {
+                    return Json(new { success = false, message = "Đăng kí thất bại", error = ex.Message });
+                }
             }
-            return Json(new { success = false, message = "Dữ liệu không hợp lệ." });
+            return Json(new { success = false, message = "Dữ liệu không hợp lệ.", errorCode = "INVALID_DATA" });
         }
 
+        public static string GetMD5(string str)
+        {
+            using (MD5 md5 = MD5.Create())
+            {
+                byte[] fromData = Encoding.UTF8.GetBytes(str);
+                byte[] targetData = md5.ComputeHash(fromData);
+                StringBuilder byte2String = new StringBuilder();
+
+                for (int i = 0; i < targetData.Length; i++)
+                {
+                    byte2String.Append(targetData[i].ToString("x2"));
+                }
+                return byte2String.ToString();
+            }
+        }
         private bool UserExists(int id)
         {
             return _context.Users.Any(e => e.UserId == id);

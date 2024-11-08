@@ -121,6 +121,7 @@
                     FullName: $('input[name="FullName"]').val(),
                     Email: $('input[name="Email"]').val(),
                     PasswordHash: $('input[name="PasswordHash"]').val(),
+                    confirmPassword: $('input[name="confirmPassword"]').val()
                 };
 
                 $.ajax({
@@ -132,8 +133,8 @@
                         window.location.href = '/Login/Login';
                     },
                     error: function(xhr, status, error) {
-                        
-                        alert('Đăng kí thất bại: ' + error);
+                        var errorMessage = xhr.responseJSON ? xhr.responseJSON.error : 'Đăng kí thất bại: ' + error;
+                        alert(errorMessage);
                     }
                 });
             });
