@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2qM9IjBH5mbXoplNqcGfrCaOJI7DKrGmPt2lU1gqrMk=",
+  "Hash": "VoohBzO0IFpb+cVBlVm0PzRDwtlqYe9IjqSj795mNgg=",
   "Source": "BTL",
   "BasePath": "_content/BTL",
   "Mode": "Default",
@@ -2485,6 +2485,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\courses-master\\courses-master\\assets\\img\\icon\\about.svg"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\icon\\E_LearNing.png",
+      "SourceId": "BTL",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\",
+      "BasePath": "_content/BTL",
+      "RelativePath": "courses-master/courses-master/assets/img/icon/E_LearNing.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\courses-master\\courses-master\\assets\\img\\icon\\E_LearNing.png"
     },
     {
       "Identity": "C:\\Users\\ADMIN\\Desktop\\WebNC\\BTL\\BTL\\wwwroot\\courses-master\\courses-master\\assets\\img\\icon\\icon1.svg",

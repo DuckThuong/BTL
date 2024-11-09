@@ -163,11 +163,11 @@
                                                         placeholder="Nhập đánh giá"></textarea>
                                                 </div>
                                                 @{
-                                                            var userId = Context.Session.GetString("UserId");
+                                                            var userName = Context.Session.GetString("userName");
 
-                                                            if (!string.IsNullOrEmpty(userId))
+                                                            if (!string.IsNullOrEmpty(userName))
                                                             {
-                                                                <p class="welcome-message">| Welcome, @userId! |</p>
+                                                                <p class="welcome-message">| Welcome, @userName! |</p>
                                                             }
                                                         }
                                             </div>
@@ -218,7 +218,7 @@
                     <div class="right-img">
                         <img src="~/courses-master/courses-master/assets/img/gallery/about.png" alt="">
 
-                        <div class="video-icon">
+                        <div class="video-icon" style="background-image: url('@Model.Image'); background-size: cover; background-position: center;">
                             <a class="popup-video btn-icon" href="@Model.VideoUrl"><i class="fas fa-play"></i></a>
                         </div>
                     </div>
