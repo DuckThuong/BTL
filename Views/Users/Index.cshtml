@@ -1,5 +1,171 @@
-﻿@model IEnumerable<BTL.Data.User>
+﻿@model BTL.Data.User
 
 @{
+    ViewData["Title"] = "User Profile";
 }
 
+<h2>User Profile</h2>
+<section class="slider-area slider-area2">
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider slider-height2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-11 col-md-12">
+                        <div class="hero__caption hero__caption2">
+                            <h1 data-animation="bounceIn" data-delay="0.2s">Thông tin tài khoản</h1>
+                            <nav aria-label="breadcrumb" class="d-flex justify-content-between align-items-center">
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="~/Home/Index">Trang chủ</a></li>
+                                    <li class="breadcrumb-item"><a href="/BaiGiang/Index">Thông tin tài khoản</a></li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="support-wrapper align-items-center" style="padding-left: 120px; padding-right: 120px; margin-top: 100px;">
+<form id="profileForm" method="post">
+    <div class="form-group">
+        <label>Tên đăng nhập:</label>
+        <input type="text" name="Username" value="@Model.Username" class="form-control" readonly id="Username" />
+    </div>
+    <div class="form-group">
+        <label>Email:</label>
+        <input type="email" name="Email" value="@Model.Email" class="form-control" disabled id="Email" />
+    </div>
+    <div class="form-group">
+        <label>Họ và tên:</label>
+        <input type="text" name="FullName" value="@Model.FullName" class="form-control" disabled id="FullName" />
+    </div>
+    <div class="form-group">
+        <label>Giới tính:</label>
+        <input type="text" name="Gender" value="@Model.Gender" class="form-control" disabled id="Gender" />
+    </div>
+    <div class="form-group">
+        <label>Năm sinh:</label>
+        <input type="number" name="BirthYear" value="@Model.BirthYear" class="form-control" disabled id="BirthYear" />
+    </div>
+    <div class="form-group">
+        <label>Tuổi:</label>
+        <input type="number" name="Age" value="@Model.Age" class="form-control" disabled id="Age" />
+    </div>
+    <div class="form-group">
+        <label>Địa chỉ:</label>
+        <input type="text" name="Address" value="@Model.Address" class="form-control" disabled id="Address" />
+    </div>
+    <div class="form-group">
+        <label>Số điện thoại:</label>
+        <input type="text" name="PhoneNumber" value="@Model.PhoneNumber" class="form-control" disabled id="PhoneNumber" />
+    </div>
+    <div class="form-group">
+        <label>Ảnh đại diện:</label>
+        <input type="text" name="ProfilePicture" value="@Model.ProfilePicture" class="form-control" disabled id="ProfilePicture" />
+        @if (!string.IsNullOrEmpty(Model.ProfilePicture))
+        {
+            <img src="@Model.ProfilePicture" alt="Ảnh đại diện" style="width:100px;height:100px;margin-top:10px;" />
+        }
+    </div>
+    <div class="form-group">
+        <label>Trạng thái:</label>
+        <input type="text" name="Status" value="@Model.Status" class="form-control" disabled id="Status" />
+    </div>
+    <div class="form-group">
+        <label>Quốc tịch:</label>
+        <input type="text" name="Nationality" value="@Model.Nationality" class="form-control" disabled id="Nationality" />
+    </div>
+    <div class="form-group">
+        <label>Nghề nghiệp:</label>
+        <input type="text" name="Occupation" value="@Model.Occupation" class="form-control" disabled id="Occupation" />
+    </div>
+    <div class="form-group">
+        <label>Tiểu sử:</label>
+        <textarea name="Bio" class="form-control" disabled id="Bio">@Model.Bio</textarea>
+    </div>
+    <div class="form-group">
+        <label>Sở thích:</label>
+        <input type="text" name="Interests" value="@Model.Interests" class="form-control" disabled id="Interests" />
+    </div>
+    <div class="form-group">
+        <label>Vai trò:</label>
+        <input type="text" name="Role" value="@Model.Role" class="form-control" readonly id="Role" />
+    </div>
+    <div class="form-group">
+        <label>Ngày tạo:</label>
+        <input type="text" value="@Model.CreatedAt?.ToString("yyyy-MM-dd")" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label>Ngày cập nhật:</label>
+        <input type="text" value="@Model.UpdatedAt?.ToString("yyyy-MM-dd")" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label>Lần đăng nhập cuối:</label>
+        <input type="text" value="@Model.LastLogin?.ToString("yyyy-MM-dd")" class="form-control" readonly />
+    </div>
+    <div class="text-right" style="margin-top: 40px; margin-bottom: 80px;">
+        <button type="submit" class="btn btn-primary" id="saveBtn" style="display:none;">Lưu</button>
+        <button type="button" class="btn btn-secondary" id="editBtn">Chỉnh sửa</button>
+    </div>
+</form>
+</div>
+<div id="successMessage" class="alert alert-success" style="display:none;"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    document.getElementById('editBtn').onclick = function () {
+        // Enable all input fields
+        var inputs = document.querySelectorAll('#profileForm input, #profileForm textarea');
+        inputs.forEach(function (input) {
+            input.disabled = false;
+        });
+
+        // Show the Save button and hide the Edit button
+        document.getElementById('saveBtn').style.display = 'inline-block';
+        this.style.display = 'none';
+    };
+
+    $(document).ready(function () {
+        $('#profileForm').on('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("UpdateProfile", "Users")',
+                data: $(this).serialize(),
+                success: function (response) {
+                    $('#successMessage').text('Cập nhật thành công!').show();
+                    setTimeout(function () {
+                        $('#successMessage').fadeOut('slow');
+                    }, 3000);
+
+                    // Disable all input fields after successful update
+                    var inputs = document.querySelectorAll('#profileForm input, #profileForm textarea');
+                    inputs.forEach(function (input) {
+                        input.disabled = true;
+                    });
+
+                    // Show the Edit button and hide the Save button
+                    document.getElementById('editBtn').style.display = 'inline-block';
+                    document.getElementById('saveBtn').style.display = 'none';
+                },
+                error: function () {
+                    alert('Có lỗi xảy ra, vui lòng thử lại.');
+                }
+            });
+        });
+    });
+</script>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
