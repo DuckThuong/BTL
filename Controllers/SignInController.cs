@@ -13,9 +13,9 @@ namespace BTL.Controllers
 {
     public class SignInController : Controller
     {
-        private readonly WebNcContext _context;
+        private readonly BaiGiang2024Context _context;
 
-        public SignInController(WebNcContext context)
+        public SignInController(BaiGiang2024Context context)
         {
             _context = context;
         }

@@ -16,11 +16,11 @@ namespace BTL.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly WebNcContext _context;
+        private readonly BaiGiang2024Context _context;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
 
-        public LoginController(WebNcContext context, SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager)
+        public LoginController(BaiGiang2024Context context, SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager)
         {
             _context = context;
             _signInManager = signInManager;

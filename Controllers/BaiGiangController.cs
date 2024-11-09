@@ -13,9 +13,9 @@ namespace BTL.Controllers
     [Authorize]
     public class BaiGiangController : Controller
     {
-        private readonly WebNcContext _context;
+        private readonly BaiGiang2024Context _context;
 
-        public BaiGiangController(WebNcContext context)
+        public BaiGiangController(BaiGiang2024Context context)
         {
             _context = context;
         }

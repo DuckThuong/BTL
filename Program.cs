@@ -9,14 +9,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // Cấu hình DbContext sử dụng SQL Server
-builder.Services.AddDbContext<WebNcContext>(options =>
+builder.Services.AddDbContext<BaiGiang2024Context>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("BTL"));
 });
 
 // Cấu hình Identity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<WebNcContext>()
+    .AddEntityFrameworkStores<BaiGiang2024Context>()
     .AddDefaultTokenProviders();
 
 // Cấu hình session
