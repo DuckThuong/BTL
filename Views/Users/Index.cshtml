@@ -1,10 +1,7 @@
 ﻿@model BTL.Data.User
 
 @{
-    ViewData["Title"] = "User Profile";
 }
-
-<h2>User Profile</h2>
 <section class="slider-area slider-area2">
     <div class="slider-active">
         <!-- Single Slider -->
@@ -27,7 +24,7 @@
         </div>
     </div>
 </section>
-<div class="support-wrapper align-items-center" style="padding-left: 120px; padding-right: 120px; margin-top: 100px;">
+<div class="support-wrapper align-items-center" style="padding-left: 150px; padding-right: 150px; margin-top: 100px;">
 <form id="profileForm" method="post">
     <div class="form-group">
         <label>Tên đăng nhập:</label>
@@ -115,21 +112,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     document.getElementById('editBtn').onclick = function () {
-        // Enable all input fields
         var inputs = document.querySelectorAll('#profileForm input, #profileForm textarea');
         inputs.forEach(function (input) {
             input.disabled = false;
         });
-
-        // Show the Save button and hide the Edit button
         document.getElementById('saveBtn').style.display = 'inline-block';
         this.style.display = 'none';
     };
 
     $(document).ready(function () {
         $('#profileForm').on('submit', function (e) {
-            e.preventDefault(); // Prevent the default form submission
-
+            e.preventDefault();
             $.ajax({
                 type: 'POST',
                 url: '@Url.Action("UpdateProfile", "Users")',
@@ -140,13 +133,11 @@
                         $('#successMessage').fadeOut('slow');
                     }, 3000);
 
-                    // Disable all input fields after successful update
                     var inputs = document.querySelectorAll('#profileForm input, #profileForm textarea');
                     inputs.forEach(function (input) {
                         input.disabled = true;
                     });
 
-                    // Show the Edit button and hide the Save button
                     document.getElementById('editBtn').style.display = 'inline-block';
                     document.getElementById('saveBtn').style.display = 'none';
                 },

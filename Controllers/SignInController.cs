@@ -29,25 +29,25 @@ namespace BTL.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(User model, string fullName, string email, string passwordHash, string confirmPassword)
         {
-            if (passwordHash != confirmPassword)
-            {
-                return Json(new { success = false, message = "Mật khẩu không khớp.", errorCode = "PASSWORD_MISMATCH" });
-            }
+            //if (passwordHash != confirmPassword)
+            //{
+            //    return Json(new { success = false, message = "Mật khẩu không khớp.", errorCode = "PASSWORD_MISMATCH" });
+            //}
 
-            if (passwordHash.Length < 8)
-            {
-                return Json(new { success = false, message = "Mật khẩu phải có ít nhất 8 ký tự.", errorCode = "PASSWORD_TOO_SHORT" });
-            }
+            //if (passwordHash.Length < 8)
+            //{
+            //    return Json(new { success = false, message = "Mật khẩu phải có ít nhất 8 ký tự.", errorCode = "PASSWORD_TOO_SHORT" });
+            //}
 
-            if (!passwordHash.Any(char.IsDigit))
-            {
-                return Json(new { success = false, message = "Mật khẩu phải chứa ít nhất một chữ số.", errorCode = "PASSWORD_NO_DIGIT" });
-            }
+            //if (!passwordHash.Any(char.IsDigit))
+            //{
+            //    return Json(new { success = false, message = "Mật khẩu phải chứa ít nhất một chữ số.", errorCode = "PASSWORD_NO_DIGIT" });
+            //}
 
-            if (!passwordHash.Any(char.IsUpper))
-            {
-                return Json(new { success = false, message = "Mật khẩu phải chứa ít nhất một chữ hoa.", errorCode = "PASSWORD_NO_UPPERCASE" });
-            }
+            //if (!passwordHash.Any(char.IsUpper))
+            //{
+            //    return Json(new { success = false, message = "Mật khẩu phải chứa ít nhất một chữ hoa.", errorCode = "PASSWORD_NO_UPPERCASE" });
+            //}
 
             if (!ModelState.IsValid)
             {
