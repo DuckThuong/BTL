@@ -68,11 +68,17 @@
                                                 <ul id="navigation">
                                                     <li class="active"><a href="~/Home/Index">Trang chủ</a></li>
                                                     <li><a href="/BaiGiang/Index">Bài Giảng</a></li>
-                                                    <li><a href="/ChinhSachcs/ChinhSach">Giới thiệu về E_Learning</a></li>
+                                                    <li><a href="/ChinhSachcs/ChinhSach">Giới thiệu về E_Learning</a>
+                                                    </li>
                                                     <li>
                                                         <a href="/Users/Index">Thông tin tài khoản</a>
                                                     </li>
-                                                    <li><a href="contact.html">Liên hệ</a></li>
+                                                    <li><a>Liên hệ</a>
+                                                        <ul class="submenu" style="width: fit-content; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px;">
+                                                            <li><a style="width: fit-content;">HotLine: +012398978668</a></li>
+                                                            <li><a style="width: fit-content;">Email: ELearning@gmail.com</a></li>
+                                                        </ul>
+                                                    </li>
                                                     <!-- Button -->
                                                     <li class="button-header">
                                                         @{
@@ -82,9 +88,10 @@
                                                             {
                                                                 <p class="welcome-message">
                                                                     | Welcome, @userEmail! |
-                                                                    <form method="post" action="/Login/Logout" style="display:inline;">
-                                                                        <button type="submit" class="btn btn3">Đăng xuất</button>
-                                                                    </form>
+                                                                <form method="post" action="/Login/Logout"
+                                                                    style="display:inline;">
+                                                                    <button type="submit" class="btn btn3">Đăng xuất</button>
+                                                                </form>
                                                                 </p>
                                                             }
                                                             else
