@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace BTL.Data;
 
@@ -48,4 +50,20 @@ public partial class User
     public virtual ICollection<LectureReview> LectureReviews { get; set; } = new List<LectureReview>();
 
     public virtual ICollection<SearchResult> SearchResults { get; set; } = new List<SearchResult>();
+
+    public static async Task<int?> GetUserIdByEmailAsync(BaiGiang2024Context context, string email)
+    {
+        var user = await context.Users
+            .FirstOrDefaultAsync(u => u.Email == email);
+
+        return user?.UserId;
+    }
+
+    public static async Task<string?> GetUserRoleByIdAsync(BaiGiang2024Context context, int userId)
+    {
+        var user = await context.Users
+            .FirstOrDefaultAsync(u => u.UserId == userId);
+
+        return user?.Role;
+    }
 }

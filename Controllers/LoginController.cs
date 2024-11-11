@@ -11,6 +11,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Session;
+using static System.Collections.Specialized.BitVector32;
 
 namespace BTL.Controllers
 {
@@ -36,8 +38,10 @@ namespace BTL.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(User model)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid){
+
                 return View("Login");
+            }else{
 
             var user = await _context.Users
                 .FirstOrDefaultAsync(u => u.Email == model.Email);
@@ -53,7 +57,8 @@ namespace BTL.Controllers
                 ModelState.AddModelError(string.Empty, "Không thể đăng nhập");
                 return View("Login");
             }
-
+            var userId = await BTL.Data.User.GetUserIdByEmailAsync(_context, model.Email);
+            var userRole = await BTL.Data.User.GetUserRoleByIdAsync(_context, (int)userId);
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, user.Email),
@@ -63,15 +68,19 @@ namespace BTL.Controllers
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+            HttpContext.Session.SetString("UserId", userId.ToString());
+            HttpContext.Session.SetString("UserRole", userRole);
 
             return RedirectToAction("Index", "Home");
+            }
+
         }
 
         [HttpPost]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login");
         }
     }
 }

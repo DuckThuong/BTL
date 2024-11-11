@@ -1,0 +1,175 @@
+﻿@model IEnumerable<BTL.Data.User>
+
+@{
+    Layout = "_TrangChu";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>E_Learning | Education</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="~/site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="~/courses-master/courses-master/assets/img/favicon.ico">
+
+    <!-- CSS here -->
+
+    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/slicknav.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/flaticon.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/gijgo.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/animate.min.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/animated-headline.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/slick.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/nice-select.css">
+    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/style.css">
+    <!--End Css-->
+
+</head>
+<body>
+<p>
+        <a asp-action="Create" class="btn hero-btn">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PasswordHash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfilePicture)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nationality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Occupation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Interests)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastLogin)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PasswordHash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfilePicture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nationality)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Occupation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Interests)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastLogin)
+            </td>
+            <td>
+                        <a asp-action="Edit" asp-route-id="@item.UserId" class="btn hero-btn">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.UserId" class="btn hero-btn">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.UserId" class="btn hero-btn">Delete</a>
+            </td>
+        </tr>
+}
+</tbody>
+</table>
+</body>
+</html>

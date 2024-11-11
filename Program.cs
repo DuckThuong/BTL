@@ -33,6 +33,11 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.LoginPath = "/Login/Login"; 
 });
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Login/Login";
+});
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;

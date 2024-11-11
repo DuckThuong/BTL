@@ -17,7 +17,17 @@ namespace BTL.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var userRole = HttpContext.Session.GetString("UserRole");
+            if (!string.IsNullOrEmpty(userRole))
+            {
+                ViewBag.UserRole = userRole;
+
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Login");
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
