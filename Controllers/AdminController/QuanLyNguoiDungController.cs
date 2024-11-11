@@ -22,6 +22,25 @@ namespace BTL.Controllers.AdminController
             return View(await _context.Users.ToListAsync());
         }
 
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
+            {
+                return Json(new { success = false, message = "Có vấn đề xảy ra" });
+            }
+
+            var relatedReviews = _context.LectureReviews.Where(r => r.UserId == id);
+            _context.LectureReviews.RemoveRange(relatedReviews);
+
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Xóa người dùng thành công";
+            return Json(new { success = true, message = "Xóa thành công" });
+        }
+
         private bool UserExists(int id)
         {
             return _context.Users.Any(e => e.UserId == id);
