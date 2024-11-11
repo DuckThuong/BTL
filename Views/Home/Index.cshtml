@@ -16,8 +16,20 @@
                                     <h1 data-animation="fadeInLeft" data-delay="0.2s">E_Learning</h1>
                                     <p data-animation="fadeInLeft" data-delay="0.4s">Mang lại những bài giảng chất lượng
                                         nhất đến với người học</p>
-                                    <a href="/BaiGiang/Index" class="btn hero-btn" data-animation="fadeInLeft"
-                                        data-delay="0.7s">Xem chi tiết</a>
+                                    @{
+                                        var userEmail = Context.Session.GetString("UserEmail");
+                                        var userRole = Context.Session.GetString("UserRole");
+                                    }
+                                    @if (userRole == "Student")
+                                    {
+                                        <a href="/BaiGiang/Index" class="btn hero-btn" data-animation="fadeInLeft"
+                                            data-delay="0.7s">Xem chi tiết</a>
+                                    }
+                                    else if (userRole == "Teacher")
+                                    {
+                                        <a href="/QuanLyBaiGiang/Index" class="btn hero-btn" data-animation="fadeInLeft"
+                                            data-delay="0.7s">Xem chi tiết</a>
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -118,7 +130,8 @@
                     <div class="right-img">
                         @* <img src="assets/img/gallery/about.png" alt=""> *@
 
-                        <div class="video-icon" style="background-image: url('/courses-master/courses-master/assets/img/icon/E_LearNing.png'); background-size: cover; background-position: center;">
+                        <div class="video-icon"
+                            style="background-image: url('/courses-master/courses-master/assets/img/icon/E_LearNing.png'); background-size: cover; background-position: center;">
                             <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=viHILXVY_eU"><i
                                     class="fas fa-play"></i></a>
                         </div>
