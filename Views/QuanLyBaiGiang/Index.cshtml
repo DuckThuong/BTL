@@ -1,134 +1,313 @@
 ﻿@model IEnumerable<BTL.Data.Lecture>
 
 @{
-    Layout = "_TrangChu";
+    Layout = null;
 }
+
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>E_Learning | Education</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="~/site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="~/courses-master/courses-master/assets/img/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Datatables - Kaiadmin Bootstrap 5 Admin Dashboard</title>
+  <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+  <link rel="icon" href="~/courses-master/courses-master/assets/img/favicon.ico" type="image/x-icon" />
 
-    <!-- CSS here -->
+  <script src="~/kaiadmin-lite-1.2.0/assets/js/plugin/webfont/webfont.min.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: ["Public Sans:300,400,500,600,700"] },
+      custom: {
+        families: [
+          "Font Awesome 5 Solid",
+          "Font Awesome 5 Regular",
+          "Font Awesome 5 Brands",
+          "simple-line-icons",
+        ],
+        urls: ["~/kaiadmin-lite-1.2.0/assets/css/fonts.min.css"],
+      },
+      active: function () {
+        sessionStorage.fonts = true;
+      },
+    });
+  </script>
 
-    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/slicknav.css">
-    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/flaticon.css">
-    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/progressbar_barfiller.css">
-    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/gijgo.css">
-    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/animate.min.css">
-    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/animated-headline.css">
-    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/themify-icons.css">
-    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/slick.css">
-    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/nice-select.css">
-    <link rel="stylesheet" href="~/courses-master/courses-master/assets/css/style.css">
-    <!--End Css-->
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="~/kaiadmin-lite-1.2.0/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="~/kaiadmin-lite-1.2.0/assets/css/plugins.min.css" />
+  <link rel="stylesheet" href="~/kaiadmin-lite-1.2.0/assets/css/kaiadmin.min.css" />
 
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link rel="stylesheet" href="~/kaiadmin-lite-1.2.0/assets/css/demo.css" />
+
+  <style>
+    .image-column {
+      max-width: 150px;
+      /* Adjust the width as needed */
+      word-wrap: break-word;
+    }
+
+    .video-url-column {
+      max-width: 150px;
+      /* Adjust the width as needed */
+      word-wrap: break-word;
+    }
+
+    .content-column {
+      width: 500px !important;
+      max-height: 150px;
+      overflow-y: auto;
+      word-wrap: break-word;
+      white-space: normal;
+      text-align: justify;
+      padding: 0 !important;
+    }
+  </style>
 </head>
+
 <body>
-    <p>
-        <a asp-action="Create" class="btn hero-btn">Create New</a>
-    </p>
-    <div style="overflow-x: auto;">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.LectureName)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Image)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Title)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Content)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.VideoUrl)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Rating)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Views)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.ReviewCount)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.CourseInfo)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.CreatedAt)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.UpdatedAt)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Course)
-                    </th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model) {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.LectureName)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Image)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Title)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Content)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.VideoUrl)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Rating)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Views)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ReviewCount)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CourseInfo)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CreatedAt)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.UpdatedAt)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Course.CourseId)
-                        </td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.LectureId" class="btn hero-btn">Edit</a> |
-                            <a asp-action="Details" asp-route-id="@item.LectureId" class="btn hero-btn">Details</a> |
-                            <a asp-action="Delete" asp-route-id="@item.LectureId" class="btn hero-btn">Delete</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+  <div class="wrapper">
+    <div class="main-panel">
+      <div class="container">
+        <div class="page-inner">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="d-flex align-items-center">
+                    <h4 class="card-title">Danh sách bài giảng</h4>
+                    <button class="btn btn-primary btn-round ms-auto" data-bs-toggle="modal"
+                      data-bs-target="#addRowModal">
+                      <i class="fa fa-plus"></i>
+                      Thêm bài giảng
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <!-- Modal -->
+                  <div class="modal fade" id="addRowModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header border-0">
+                          <h5 class="modal-title">
+                            <span class="fw-mediumbold"> Thêm</span>
+                            <span class="fw-light"> Bài giảng </span>
+                          </h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p class="small">
+                            Vui lòng điền đầy đủ thông tin của bài giảng bạn muốn thêm !
+                          </p>
+                          <form>
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="form-group form-group-default">
+                                  <label>Tên bài giảng</label>
+                                  <input id="lectureName" type="text" class="form-control"
+                                    placeholder="Tên bài giảng" />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group form-group-default">
+                                  <label>Thông tin khóa học</label>
+                                  <input id="courseInfo" type="text" class="form-control"
+                                    placeholder="Thông tin khóa học" />
+                                </div>
+                              </div>
+                              <div class="col-md-6 pe-0">
+                                <div class="form-group form-group-default">
+                                  <label>Ảnh minh họa</label>
+                                  <input id="image" type="text" class="form-control" placeholder="Đường dẫn hình ảnh" />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group form-group-default">
+                                  <label>Tiêu đề bài giảng</label>
+                                  <input id="title" type="text" class="form-control"
+                                    placeholder="Tiêu đề của bài giảng" />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group form-group-default">
+                                  <label>Nội dung bài giảngs</label>
+                                  <input id="content" type="text" class="form-control"
+                                    placeholder="Nội dung của bài giảng của bài giảng" />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group form-group-default">
+                                  <label>Video bài giảng</label>
+                                  <input id="title" type="text" class="form-control"
+                                    placeholder="Đường dẫn tới video của bài giảng" />
+                                </div>
+                              </div>
+
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer border-0">
+                          <button type="button" id="addRowButton" class="btn btn-primary">
+                            Thêm
+                          </button>
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">
+                            Đóng
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="table-responsive">
+                    <table id="add-row" class="display table table-striped table-hover">
+                      <thead>
+                        <tr>
+                          <th>Id Bài Giảng</th>
+                          <th>Tên Bài Giảng</th>
+                          <th>Hình Ảnh</th>
+                          <th>Tiêu Đề</th>
+                          <th>Nội Dung</th>
+                          <th>Đường dẫn Video</th>
+                          <th>Đánh Giá</th>
+                          <th>Lượt Xem</th>
+                          <th>Số Lượng Đánh Giá</th>
+                          <th>Thông Tin Khóa Học</th>
+                          <th>Ngày Tải Lên</th>
+                          <th>Ngày Cập Nhật</th>
+                          <th style="width: 10%">Hành Động</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @foreach (var item in Model)
+                        {
+                          <tr>
+                            <td>
+                              @Html.DisplayFor(modelItem => item.LectureId)
+                            </td>
+                            <td>
+                              @Html.DisplayFor(modelItem => item.LectureName)
+                            </td>
+                            <td class="image-column">
+                              <img src="@Html.DisplayFor(modelItem => item.Image)" alt="Lecture Image"
+                                style="width: 100%;" />
+                            </td>
+                            <td>
+                              @Html.DisplayFor(modelItem => item.Title)
+                            </td>
+                            <td class="content-column" style="padding: 5px !important;">
+                              @Html.DisplayFor(modelItem => item.Content)
+                            </td>
+                            <td class="video-url-column">
+                              @Html.DisplayFor(modelItem => item.VideoUrl)
+                            </td>
+                            <td>
+                              @Html.DisplayFor(modelItem => item.Rating)
+                            </td>
+                            <td>
+                              @Html.DisplayFor(modelItem => item.Views)
+                            </td>
+                            <td>
+                              @Html.DisplayFor(modelItem => item.ReviewCount)
+                            </td>
+                            <td>
+                              @Html.DisplayFor(modelItem => item.CourseInfo)
+                            </td>
+                            <td>
+                              @Html.DisplayFor(modelItem => item.CreatedAt)
+                            </td>
+                            <td>
+                              @Html.DisplayFor(modelItem => item.UpdatedAt)
+                            </td>
+                            <td>
+                              <div class="form-button-action">
+                                <button type="button" data-bs-toggle="tooltip" title=""
+                                  class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+                                  <i class="fa fa-edit"></i>
+                                </button>
+                                <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
+                                  data-original-title="Remove">
+                                  <i class="fa fa-times"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        }
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <script src="~/kaiadmin-lite-1.2.0/assets/js/core/jquery-3.7.1.min.js"></script>
+  <script src="~/kaiadmin-lite-1.2.0/assets/js/core/popper.min.js"></script>
+  <script src="~/kaiadmin-lite-1.2.0/assets/js/core/bootstrap.min.js"></script>
+  <script src="~/kaiadmin-lite-1.2.0/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="~/kaiadmin-lite-1.2.0/assets/js/plugin/datatables/datatables.min.js"></script>
+  <script src="~/kaiadmin-lite-1.2.0/assets/js/kaiadmin.min.js"></script>
+  <script src="~/kaiadmin-lite-1.2.0/assets/js/setting-demo2.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#basic-datatables").DataTable({});
+
+      $("#multi-filter-select").DataTable({
+        pageLength: 5,
+        initComplete: function () {
+          this.api()
+            .columns()
+            .every(function () {
+              var column = this;
+              var select = $(
+                '<select class="form-select"><option value=""></option></select>'
+              )
+                .appendTo($(column.footer()).empty())
+                .on("change", function () {
+                  var val = $.fn.dataTable.util.escapeRegex($(this).val());
+
+                  column
+                    .search(val ? "^" + val + "$" : "", true, false)
+                    .draw();
+                });
+
+              column
+                .data()
+                .unique()
+                .sort()
+                .each(function (d, j) {
+                  select.append(
+                    '<option value="' + d + '">' + d + "</option>"
+                  );
+                });
+            });
+        },
+      });
+
+      $("#add-row").DataTable({
+        pageLength: 5,
+      });
+
+      var action =
+        '<td> <div class="form-button-action"> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
+
+      $("#addRowButton").click(function () {
+        $("#add-row")
+          .dataTable()
+          .fnAddData([
+            $("#addName").val(),
+            $("#addPosition").val(),
+            $("#addOffice").val(),
+            action,
+          ]);
+        $("#addRowModal").modal("hide");
+      });
+    });
+  </script>
 </body>
+
 </html>
