@@ -184,10 +184,18 @@ namespace BTL.Controllers
 
             lecture.ReviewCount = (lecture.ReviewCount ?? 0) + 1;
             lecture.Rating = ((lecture.Rating ?? 0) * (lecture.ReviewCount - 1) + request.NewRating) / lecture.ReviewCount;
+            var userIdString = HttpContext.Session.GetString("UserId");
+            if (userIdString == null)
+            {
+                return Json(new { success = false, message = "User not logged in" });
+            }
+
+            var userId = int.Parse(userIdString);
+
             var review = new LectureReview
             {
                 LectureId = request.Id,
-                UserId = HttpContext.Session.GetInt32("UserId") ?? 3,
+                UserId = userId,
                 Rating = request.NewRating,
                 Comment = request.ReviewContent,
                 CreatedAt = DateTime.Parse(request.Timestamp),
