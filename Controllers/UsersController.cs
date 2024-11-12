@@ -43,30 +43,56 @@ namespace BTL.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdateProfile(User user)
+        public async Task<IActionResult> UpdateProfile(int id, User user)
         {
-            if (ModelState.IsValid)
+            try
             {
-                try
+                var userIdString = HttpContext.Session.GetString("UserId");
+                if (userIdString == null)
                 {
-                    _context.Update(user);
-                    await _context.SaveChangesAsync();
-                    TempData["SuccessMessage"] = "Cập nhật thành công!";
-                    return RedirectToAction(nameof(Index));
+                    return Json(new { success = false, message = "User not logged in" });
                 }
-                catch (DbUpdateConcurrencyException)
+
+                var userId = int.Parse(userIdString);
+                var existingUser = await _context.Users.FindAsync(userId);
+                if (existingUser == null)
                 {
-                    if (!UserExists(user.UserId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    return NotFound();
+                }
+
+                // Update the properties of the existing user
+                existingUser.Username = user.Username;
+                existingUser.Email = user.Email;
+                existingUser.FullName = user.FullName;
+                existingUser.Gender = user.Gender;
+                existingUser.BirthYear = user.BirthYear;
+                existingUser.Age = user.Age;
+                existingUser.Address = user.Address;
+                existingUser.PhoneNumber = user.PhoneNumber;
+                existingUser.ProfilePicture = user.ProfilePicture;
+                existingUser.Status = user.Status;
+                existingUser.Nationality = user.Nationality;
+                existingUser.Occupation = user.Occupation;
+                existingUser.Bio = user.Bio;
+                existingUser.Interests = user.Interests;
+                existingUser.Role = user.Role;
+                existingUser.UpdatedAt = DateTime.Now;
+
+                await _context.SaveChangesAsync();
+                TempData["SuccessMessage"] = "Cập nhật thành công!";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UserExists(user.UserId))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
                 }
             }
-            return View("Index", user);
         }
 
         private bool UserExists(int id)

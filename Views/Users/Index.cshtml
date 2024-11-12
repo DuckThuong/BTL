@@ -25,7 +25,11 @@
     </div>
 </section>
 <div class="support-wrapper align-items-center" style="padding-left: 150px; padding-right: 150px; margin-top: 100px;">
-<form id="profileForm" method="post">
+    <form id="profileForm" method="post" asp-action="UpdateProfile">
+    <div class="form-group">
+        <label>ID:</label>
+        <input type="text" name="Username" value="@Model.UserId" class="form-control" readonly id="Username" />
+    </div>
     <div class="form-group">
         <label>Tên đăng nhập:</label>
         <input type="text" name="Username" value="@Model.Username" class="form-control" readonly id="Username" />
@@ -116,32 +120,55 @@
         this.style.display = 'none';
     };
 
-    $(document).ready(function () {
-        $('#profileForm').on('submit', function (e) {
-            e.preventDefault();
-            $.ajax({
-                type: 'POST',
-                url: '@Url.Action("UpdateProfile", "Users")',
-                data: $(this).serialize(),
-                success: function (response) {
-                    $('#successMessage').text('Cập nhật thành công!').show();
-                    setTimeout(function () {
-                        $('#successMessage').fadeOut('slow');
-                    }, 3000);
-                    var inputs = document.querySelectorAll('#profileForm input, #profileForm textarea');
-                    inputs.forEach(function (input) {
-                        input.disabled = true;
-                    });
+    function updateUser( username, email, fullName, gender, birthYear, address, phoneNumber, profilePicture, nationality, occupation, bio, interests, role) {
+        const userData = {
+            UserId: @Model.UserId,
+            Username: username,
+            Email: email,
+            FullName: fullName,
+            Gender: gender,
+            BirthYear: birthYear,
+            Address: address,
+            PhoneNumber: phoneNumber,
+            ProfilePicture: profilePicture,
+            Nationality: nationality,
+            Occupation: occupation,
+            Bio: bio,
+            Interests: interests,
+            Role: role,
+            UpdatedAt: new Date().toISOString()
+        };
 
-                    document.getElementById('editBtn').style.display = 'inline-block';
-                    document.getElementById('saveBtn').style.display = 'none';
-                },
-                error: function () {
-                    alert('Có lỗi xảy ra, vui lòng thử lại.');
-                }
-            });
-        });
+        fetch(`/User/UpdateProfile/${@Model.UserId}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(userData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.success ? 'Thông tin người dùng đã được cập nhật thành công!' : 'Có lỗi xảy ra khi cập nhật thông tin người dùng.');
+            if (data.success) location.reload();
+        })
+        .catch(error => console.error('Error:', error));
+    }
+    $('#saveBtn').click(function () {
+        const username = $('#Username').val();
+        const email = $('#Email').val();
+        const fullName = $('#FullName').val();
+        const gender = $('#Gender').val();
+        const birthYear = $('#BirthYear').val();
+        const address = $('#Address').val();
+        const phoneNumber = $('#PhoneNumber').val();
+        const profilePicture = $('#ProfilePicture').val();
+        const nationality = $('#Nationality').val();
+        const occupation = $('#Occupation').val();
+        const bio = $('#Bio').val();
+        const interests = $('#Interests').val();
+        const role = $('#Role').val();
+
+        updateUser(username, email, fullName, gender, birthYear, address, phoneNumber, profilePicture, nationality, occupation, bio, interests, role);
     });
+
 </script>
 
 @if (!ViewData.ModelState.IsValid)

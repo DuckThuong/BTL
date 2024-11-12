@@ -25,29 +25,6 @@ namespace BTL.Controllers.AdminController
             return View(await baiGiang2024Context.ToListAsync());
         }
 
-        public async Task<IActionResult> Create(Lecture lecture)
-        {
-            try
-            {
-                var newLecture = new Lecture
-                {
-                    LectureName = lecture.LectureName,
-                    CourseInfo = lecture.CourseInfo,
-                    Title = lecture.Title,
-                    Image = lecture.Image,
-                    Content = lecture.Content,
-                    VideoUrl = lecture.VideoUrl
-                };
-
-                _context.Lectures.Add(newLecture);
-                await _context.SaveChangesAsync();
-                return Json(new { success = true });
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                return Json(new { success = false });
-            }
-        }
 
         [HttpPut]
         public async Task<IActionResult> Update(int id,[FromBody] Lecture lecture)
@@ -101,6 +78,35 @@ namespace BTL.Controllers.AdminController
             {
                 return Json(new { success = false, message = "Error occurred while deleting the lecture: " + ex.Message });
             }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] Lecture lecture)
+        {
+            if (ModelState.IsValid)
+            {
+                if (!_context.Courses.Any(c => c.CourseId == lecture.CourseId))
+                {
+                    return Json(new { success = false, message = "Invalid CourseId. The specified course does not exist." });
+                }
+
+                try
+                {
+                    _context.Lectures.Add(lecture);
+                    await _context.SaveChangesAsync();
+                    return Json(new { success = true });
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error occurred while adding the lecture: " + ex.Message);
+                    if (ex.InnerException != null)
+                    {
+                        Console.WriteLine("Inner exception: " + ex.InnerException.Message);
+                    }
+                    return Json(new { success = false, message = "Error occurred while adding the lecture: " + ex.Message });
+                }
+            }
+            return Json(new { success = false, message = "Invalid data." });
         }
 
         private bool LectureExists(int id)
