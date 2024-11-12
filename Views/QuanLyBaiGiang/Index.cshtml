@@ -163,7 +163,7 @@
                                 <div class="form-group form-group-default">
                                   <label>Tiêu đề bài giảng</label>
                                   <input id="title" type="text" class="form-control"
-                                    placeholder="Tiêu đề của bài giảng" />
+                                    placeholder="Tiêu đề ca bài giảng" />
                                 </div>
                               </div>
                               <div class="col-md-6">
@@ -176,7 +176,7 @@
                               <div class="col-md-6">
                                 <div class="form-group form-group-default">
                                   <label>Video bài giảng</label>
-                                  <input id="title" type="text" class="form-control"
+                                  <input id="videoUrl" type="text" class="form-control"
                                     placeholder="Đường dẫn tới video của bài giảng" />
                                 </div>
                               </div>
@@ -188,7 +188,82 @@
                           <button type="button" id="addRowButton" class="btn btn-primary">
                             Thêm
                           </button>
-                          <button type="button" class="btn btn-danger" data-dismiss="modal">
+                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="clearModalFields()">
+                            Đóng
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="editRowModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header border-0">
+                          <h5 class="modal-title">
+                            <span class="fw-mediumbold"> Sửa</span>
+                            <span class="fw-light"> Bài giảng </span>
+                          </h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p class="small">
+                            Vui lòng điền ầy đủ thông tin của bài giảng bạn muốn sửa !
+                          </p>
+                          <form>
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="form-group form-group-default">
+                                  <label>Tên bài giảng</label>
+                                  <input id="lectureNameEdit" type="text" class="form-control"
+                                    placeholder="Tên bài giảng" />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group form-group-default">
+                                  <label>Thông tin khóa học</label>
+                                  <input id="courseInfoEdit" type="text" class="form-control"
+                                    placeholder="Thông tin khóa học" />
+                                </div>
+                              </div>
+                              <div class="col-md-6 pe-0">
+                                <div class="form-group form-group-default">
+                                  <label>Ảnh minh họa</label>
+                                  <input id="imageEdit" type="text" class="form-control" placeholder="Đường dẫn hình ảnh" />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group form-group-default">
+                                  <label>Tiêu đề bài giảng</label>
+                                  <input id="titleEdit" type="text" class="form-control"
+                                    placeholder="Tiêu đề ca bài giảng" />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group form-group-default">
+                                  <label>Nội dung bài giảngs</label>
+                                  <input id="contentEdit" type="text" class="form-control"
+                                    placeholder="Nội dung của bài giảng của bài giảng" />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group form-group-default">
+                                  <label>Video bài giảng</label>
+                                  <input id="videoUrlEdit" type="text" class="form-control"
+                                    placeholder="Đường dẫn tới video của bài giảng" />
+                                </div>
+                              </div>
+
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer border-0">
+                          <button type="button" id="updateRowButton" class="btn btn-primary">
+                            Lưu
+                          </button>
+                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="clearModalFields()">
                             Đóng
                           </button>
                         </div>
@@ -258,12 +333,18 @@
                             </td>
                             <td>
                               <div class="form-button-action">
-                                <button type="button" data-bs-toggle="tooltip" title=""
-                                  class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#editRowModal" 
+                                  data-lecture-name="@item.LectureName" 
+                                  data-course-info="@item.CourseInfo"
+                                  data-image="@item.Image"
+                                  data-title="@item.Title"
+                                  data-content="@item.Content"
+                                  data-video-url="@item.VideoUrl"
+                                  title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
                                   <i class="fa fa-edit">Sửa</i>
                                 </button>
                                 <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
-                                  data-original-title="Remove">
+                                  data-original-title="Remove" onclick="deleteLecture(@item.LectureId)">
                                   <i class="fa fa-times">Xóa</i>
                                 </button>
                               </div>
@@ -323,59 +404,173 @@
 
   <script>
     $(document).ready(function () {
-      $("#basic-datatables").DataTable({});
+      const dataTableOptions = {
+        pageLength: 5,
+        columns: [
+          { title: "Id Bài Giảng" },
+          { title: "Tên Bài Giảng" },
+          { title: "Hình Ảnh" },
+          { title: "Tiêu Đề" },
+          { title: "Nội Dung" },
+          { title: "Đường dẫn Video" },
+          { title: "Đánh Giá" },
+          { title: "Lượt Xem" },
+          { title: "Số Lượng Đánh Giá" },
+          { title: "Thông Tin Khóa Học" },
+          { title: "Ngày Tải Lên" },
+          { title: "Ngày Cập Nhật" },
+          { title: "Hành Động" }
+        ]
+      };
+
+      $("#add-row").DataTable(dataTableOptions);
 
       $("#multi-filter-select").DataTable({
-        pageLength: 5,
+        ...dataTableOptions,
         initComplete: function () {
-          this.api()
-            .columns()
-            .every(function () {
-              var column = this;
-              var select = $(
-                '<select class="form-select"><option value=""></option></select>'
-              )
-                .appendTo($(column.footer()).empty())
-                .on("change", function () {
-                  var val = $.fn.dataTable.util.escapeRegex($(this).val());
+          this.api().columns().every(function () {
+            const column = this;
+            const select = $('<select class="form-select"><option value=""></option></select>')
+              .appendTo($(column.footer()).empty())
+              .on("change", function () {
+                const val = $.fn.dataTable.util.escapeRegex($(this).val());
+                column.search(val ? "^" + val + "$" : "", true, false).draw();
+              });
 
-                  column
-                    .search(val ? "^" + val + "$" : "", true, false)
-                    .draw();
-                });
-
-              column
-                .data()
-                .unique()
-                .sort()
-                .each(function (d, j) {
-                  select.append(
-                    '<option value="' + d + '">' + d + "</option>"
-                  );
-                });
+            column.data().unique().sort().each(function (d) {
+              select.append('<option value="' + d + '">' + d + "</option>");
             });
-        },
+          });
+        }
       });
 
-      $("#add-row").DataTable({
-        pageLength: 5,
-      });
-
-      var action =
-        '<td> <div class="form-button-action"> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
+      const actionButtons = `
+        <div class="form-button-action">
+          <button type="button" data-bs-toggle="tooltip" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+            <i class="fa fa-edit"></i>
+          </button>
+          <button type="button" data-bs-toggle="tooltip" class="btn btn-link btn-danger" data-original-title="Remove">
+            <i class="fa fa-times"></i>
+          </button>
+        </div>`;
 
       $("#addRowButton").click(function () {
-        $("#add-row")
-          .dataTable()
-          .fnAddData([
-            $("#addName").val(),
-            $("#addPosition").val(),
-            $("#addOffice").val(),
-            action,
-          ]);
+        $("#add-row").DataTable().row.add([
+          '',
+          $("#lectureName").val(),
+          $("#image").val(),
+          $("#title").val(),
+          $("#content").val(),
+          $("#videoUrl").val(),
+          '0', '0', '0',
+          $("#courseInfo").val(),
+          new Date().toLocaleDateString(),
+          new Date().toLocaleDateString(),
+          actionButtons
+        ]).draw();
+
         $("#addRowModal").modal("hide");
       });
+      //Sửa bài giảng
+      $('#editRowModal').on('show.bs.modal', function (event) {
+        const button = $(event.relatedTarget);
+        const modal = $(this);
+        modal.data('lecture-id', button.closest('tr').find('td:first').text().trim());
+
+        ['lectureNameEdit', 'courseInfoEdit', 'imageEdit', 'titleEdit', 'contentEdit', 'videoUrlEdit'].forEach(id => {
+          const value = button.data(id.replace(/([A-Z])/g, '-$1').toLowerCase());
+          console.log(`Setting ${id} to ${value}`);
+          modal.find(`#${id}`).val(value);
+        });
+      });
+
+      $('#updateRowButton').click(function () {
+        const lectureId = $('#editRowModal').data('lecture-id').trim();
+        const lectureData = {
+          LectureId: lectureId,
+          LectureName: $('#lectureNameEdit').val(),
+          CourseInfo: $('#courseInfoEdit').val(),
+          Image: $('#imageEdit').val(),
+          Title: $('#titleEdit').val(),
+          Content: $('#contentEdit').val(),
+          VideoUrl: $('#videoUrlEdit').val(),
+          Rating: 0,
+          Views: 0,
+          ReviewCount: 0,
+          CourseId: 0,
+          CreatedAt: new Date().toISOString(),
+          UpdatedAt: new Date().toISOString()
+        };
+
+        fetch(`/QuanLyBaiGiang/Update/${lectureId}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(lectureData)
+        })
+        .then(response => response.json())
+        .then(data => {
+          alert(data.success ? 'Bài giảng đã được cập nhật thành công!' : 'Có lỗi xảy ra khi cập nhật bài giảng.');
+          if (data.success) location.reload();
+        })
+        .catch(error => console.error('Error:', error));
+      });
     });
+    //Clear dữ liệu
+    function clearModalFields() {
+      $('#addRowModal').find('input').val('');
+    }
+  //Thêm bài giảng
+    document.getElementById('addRowButton').addEventListener('click', function () {
+      const lectureData = {
+        LectureName: $('#lectureName').val(),
+        CourseInfo: $('#courseInfo').val(),
+        Image: $('#image').val(),
+        Title: $('#title').val(),
+        Content: $('#content').val(),
+        VideoUrl: $('#videoUrl').val(),
+        Rating: 0,
+        Views: 0,
+        ReviewCount: 0,
+        CourseId: 0,
+        CreatedAt: new Date().toISOString(),
+        UpdatedAt: new Date().toISOString()
+      };
+
+      console.log(lectureData);
+
+      fetch('/QuanLyBaiGiang/Create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lectureData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert(data.success ? 'Bài giảng đã được thêm thành công!' : 'Có lỗi xảy ra khi thêm bài giảng.');
+        if (data.success) location.reload();
+      })
+      .catch(error => console.error('Error:', error));
+    });
+    function deleteLecture(lectureId) {
+      if (confirm('Bạn có chắc chắn muốn xóa bài giảng này không?')) {
+        fetch(`/QuanLyBaiGiang/Delete/${lectureId}`, {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+            'RequestVerificationToken': '@Html.AntiForgeryToken()'
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            alert('Bài giảng đã được xóa thành công!');
+            location.reload();
+          } else {
+            alert('Có lỗi xảy ra khi xóa bài giảng.');
+          }
+        })
+        .catch(error => console.error('Error:', error));
+      }
+    }
   </script>
 </body>
 

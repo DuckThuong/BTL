@@ -67,10 +67,6 @@
         }
     </div>
     <div class="form-group">
-        <label>Trạng thái:</label>
-        <input type="text" name="Status" value="@Model.Status" class="form-control" disabled id="Status" />
-    </div>
-    <div class="form-group">
         <label>Quốc tịch:</label>
         <input type="text" name="Nationality" value="@Model.Nationality" class="form-control" disabled id="Nationality" />
     </div>
@@ -132,7 +128,6 @@
                     setTimeout(function () {
                         $('#successMessage').fadeOut('slow');
                     }, 3000);
-
                     var inputs = document.querySelectorAll('#profileForm input, #profileForm textarea');
                     inputs.forEach(function (input) {
                         input.disabled = true;
