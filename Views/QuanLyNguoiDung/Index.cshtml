@@ -288,12 +288,16 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
+                    alert('Bạn muốn xóa người dùng này ?');
                     location.reload();
                 } else {
-                    alert('Failed to delete user');
+                    alert('Xóa người dùng thất bại: ' + data.message);
                 }
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => {
+                console.error('Lỗi:', error);
+                alert('Đã xảy ra lỗi khi xóa người dùng.');
+            });
         }
     </script>
 </body>

@@ -149,8 +149,12 @@
                               <div class="col-md-6">
                                 <div class="form-group form-group-default">
                                   <label>Thông tin khóa học</label>
-                                  <input id="courseInfo" type="text" class="form-control"
-                                    placeholder="Thông tin khóa học" />
+                                  <select id="courseSelect">
+                                    <option value="1">Lập trình căn bản</option>
+                                    <option value="2">Thuật toán và cấu trúc dữ liệu</option>
+                                    <option value="3">Mạng máy tính</option>
+                                    <option value="4">Trí tuệ nhân tạo</option>
+                                  </select>
                                 </div>
                               </div>
                               <div class="col-md-6 pe-0">
@@ -507,7 +511,7 @@
           Rating: 0,
           Views: 0,
           ReviewCount: 0,
-          CourseId: 0,
+          CourseId: $('#courseSelect').val(),
           CreatedAt: new Date().toISOString(),
           UpdatedAt: new Date().toISOString()
         };
@@ -517,12 +521,12 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(lectureData)
         })
-        .then(response => response.json())
-        .then(data => {
-          alert(data.success ? 'Bài giảng đã được thêm thành công!' : 'Có lỗi xảy ra khi thêm bài giảng.');
-          if (data.success) location.reload();
-        })
-        .catch(error => console.error('Error:', error));
+          .then(response => response.json())
+          .then(data => {
+            alert(data.success ? 'Bài giảng đã được thêm thành công!' : 'Có lỗi xảy ra khi thêm bài giảng.');
+            if (data.success) location.reload();
+          })
+          .catch(error => console.error('Error:', error));
       });
     });
     //Clear dữ liệu

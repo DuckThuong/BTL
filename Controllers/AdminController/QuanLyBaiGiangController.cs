@@ -25,7 +25,6 @@ namespace BTL.Controllers.AdminController
             return View(await baiGiang2024Context.ToListAsync());
         }
 
-
         [HttpPut]
         public async Task<IActionResult> Update(int id,[FromBody] Lecture lecture)
         {
@@ -62,7 +61,7 @@ namespace BTL.Controllers.AdminController
             var lecture = await _context.Lectures.FindAsync(id);
             if (lecture == null)
             {
-                return Json(new { success = false, message = "Lecture not found." });
+                return Json(new { success = false, message = "Bài giảng không tìm thấy." });
             }
 
             try
@@ -76,7 +75,7 @@ namespace BTL.Controllers.AdminController
             }
             catch (Exception ex)
             {
-                return Json(new { success = false, message = "Error occurred while deleting the lecture: " + ex.Message });
+                return Json(new { success = false, message = "Đã xảy ra lỗi khi xóa bài giảng: " + ex.Message });
             }
         }
 
@@ -87,7 +86,7 @@ namespace BTL.Controllers.AdminController
             {
                 if (!_context.Courses.Any(c => c.CourseId == lecture.CourseId))
                 {
-                    return Json(new { success = false, message = "Invalid CourseId. The specified course does not exist." });
+                    return Json(new { success = false, message = "CourseId không hợp lệ. Khóa học được chỉ định không tồn tại." });
                 }
 
                 try
@@ -98,15 +97,15 @@ namespace BTL.Controllers.AdminController
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error occurred while adding the lecture: " + ex.Message);
+                    Console.WriteLine("Đã xảy ra lỗi khi thêm bài giảng: " + ex.Message);
                     if (ex.InnerException != null)
                     {
-                        Console.WriteLine("Inner exception: " + ex.InnerException.Message);
+                        Console.WriteLine("Ngoại lệ bên trong: " + ex.InnerException.Message);
                     }
-                    return Json(new { success = false, message = "Error occurred while adding the lecture: " + ex.Message });
+                    return Json(new { success = false, message = "Đã xảy ra lỗi khi thêm bài giảng: " + ex.Message });
                 }
             }
-            return Json(new { success = false, message = "Invalid data." });
+            return Json(new { success = false, message = "Dữ liệu không hợp lệ." });
         }
 
         private bool LectureExists(int id)
