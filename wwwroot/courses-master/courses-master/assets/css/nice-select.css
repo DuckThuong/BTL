@@ -6,15 +6,16 @@
   box-sizing: border-box;
   clear: both;
   cursor: pointer;
-  display: block;
+  display: flex;
+  align-items: center;
+  height: 24px;
   float: left;
   font-family: inherit;
   font-size: 14px;
   font-weight: normal;
-  height: 42px;
   line-height: 40px;
   outline: none;
-  padding-left: 18px;
+  padding-left: 10px;
   padding-right: 30px;
   position: relative;
   text-align: left !important;
@@ -25,7 +26,11 @@
       -ms-user-select: none;
           user-select: none;
   white-space: nowrap;
-  width: auto; }
+  width: 100% !important;
+  vertical-align: middle;
+  border: 1px solid #ced4da;
+  
+ }
   .nice-select:hover {
     border-color: #dbdbdb; }
   .nice-select:active, .nice-select.open, .nice-select:focus {
