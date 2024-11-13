@@ -240,8 +240,12 @@
                                                             <div class="col-md-6">
                                                                 <div class="form-group form-group-default">
                                                                     <label>Thông tin khóa học</label>
-                                                                    <input id="courseInfoEdit" type="text" class="form-control"
-                                                                           placeholder="Thông tin khóa học" />
+                                                                    <select id="courseInfoEdit">
+                                                                        <option value="1">Lập trình căn bản</option>
+                                                                        <option value="2">Thuật toán và cấu trúc dữ liệu</option>
+                                                                        <option value="3">Mạng máy tính</option>
+                                                                        <option value="4">Trí tuệ nhân tạo</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6 pe-0">
@@ -502,7 +506,7 @@
             });
             //Button update dữ liệu của modal
             $('#updateRowButton').click(function () {
-                const lectureId = $('#editRowModal').data('lecture-id').trim();
+                const lectureId = String($('#editRowModal').data('lecture-id')).trim();
                 const lectureData = {
                     LectureId: lectureId,
                     LectureName: $('#lectureNameEdit').val(),
@@ -519,23 +523,27 @@
                     UpdatedAt: new Date().toISOString()
                 };
 
+                console.log('Lecture ID:', lectureId); // Log the lecture ID
+                console.log('Sending data:', lectureData); // Log the data being sent
+
                 fetch(`/QuanLyBaiGiang/Update/${lectureId}`, {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(lectureData)
                 })
-                    .then(response => response.json())
-                    .then(data => {
-                        alert(data.success ? 'Bài giảng đã được cập nhật thành công!' : 'Có lỗi xảy ra khi cập nhật bài giảng.');
-                        if (data.success) location.reload();
-                    })
-                    .catch(error => console.error('Error:', error));
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Response received:', data); // Log the response
+                    alert(data.success ? 'Bài giảng đã được cập nhật thành công!' : 'Có lỗi xảy ra khi cập nhật bài giảng.');
+                    if (data.success) location.reload();
+                })
+                .catch(error => console.error('Error:', error));
             });
 
             $('#addRowButton').click(function () {
                 const lectureData = {
                     LectureName: $('#lectureName').val(),
-                    CourseInfo: $('#courseInfo').val(),
+                    CourseInfo: $('#courseInfoEdit option:selected').text(), 
                     Image: $('#image').val(),
                     Title: $('#title').val(),
                     Content: $('#content').val(),
@@ -547,6 +555,7 @@
                     CreatedAt: new Date().toISOString(),
                     UpdatedAt: new Date().toISOString()
                 };
+                    console.log(lectureData);
 
                 fetch('/QuanLyBaiGiang/Create', {
                     method: 'POST',
