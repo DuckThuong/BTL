@@ -108,6 +108,30 @@ namespace BTL.Controllers.AdminController
             return Json(new { success = false, message = "Dữ liệu không hợp lệ." });
         }
 
+        [HttpGet]
+        public async Task<IActionResult> ShowModalData(int id)
+        {
+            var lecture = await _context.Lectures.FindAsync(id);
+            if (lecture == null)
+            {
+                return Json(new { success = false, message = "Bài giảng không tìm thấy." });
+            }
+
+            return Json(new
+            {
+                success = true,
+                data = new
+                {
+                    lecture.LectureName,
+                    lecture.CourseInfo,
+                    lecture.Image,
+                    lecture.Title,
+                    lecture.Content,
+                    lecture.VideoUrl,
+                }
+            });
+        }
+
         private bool LectureExists(int id)
         {
             return _context.Lectures.Any(e => e.LectureId == id);

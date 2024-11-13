@@ -124,13 +124,27 @@
                     confirmPassword: $('input[name="confirmPassword"]').val()
                 };
 
+                // Check if passwords match
+                if (formData.PasswordHash !== formData.confirmPassword) {
+                    alert('Mật khẩu và xác nhận mật khẩu không khớp.');
+                    $('input[name="PasswordHash"]').focus(); 
+                    return;
+                }
+
                 $.ajax({
                     url: '/SignIn/Register', 
                     type: 'POST',
                     data: formData,
                     success: function(response) {
-                        alert('Đăng kí thành công!');
-                        window.location.href = '/Login/Login';
+                        if (response.success) {
+                            alert('Đăng kí thành công!');
+                            window.location.href = '/Login/Login';
+                        } else {
+                            alert(response.message);
+                            if (response.errorCode === "USER_EXISTS") {
+                                $('input[name="Email"]').focus(); // Focus back on the email input
+                            }
+                        }
                     },
                     error: function(xhr, status, error) {
                         var errorMessage = xhr.responseJSON ? xhr.responseJSON.error : 'Đăng kí thất bại: ' + error;
