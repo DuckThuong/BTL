@@ -76,6 +76,17 @@
       text-align: justify;
       padding: 0 !important;
     }
+
+    /* Ensure the modal has a higher z-index than the select dropdown */
+    .modal {
+      z-index: 1050; /* Bootstrap default for modals */
+    }
+
+    /* Adjust the z-index of the select dropdown if necessary */
+    select {
+      z-index: 1060; /* Higher than the modal */
+      position: relative; /* Ensure z-index is applied */
+    }
   </style>
 </head>
 
@@ -249,7 +260,7 @@
                               </div>
                               <div class="col-md-6">
                                 <div class="form-group form-group-default">
-                                  <label>Nội dung bài giảngs</label>
+                                  <label>Nội dung bài giảng</label>
                                   <input id="contentEdit" type="text" class="form-control"
                                     placeholder="Nội dung của bài giảng của bài giảng" />
                                 </div>
@@ -343,8 +354,7 @@
                                 <button type="button" data-bs-toggle="modal" data-bs-target="#editRowModal"
                                   data-lecture-name="@item.LectureName" data-course-info="@item.CourseInfo"
                                   data-image="@item.Image" data-title="@item.Title" data-content="@item.Content"
-                                  data-video-url="@item.VideoUrl" title="" class="btn btn-link btn-primary btn-lg"
-                                  data-original-title="Edit Task">
+                                  data-video-url="@item.VideoUrl" class="btn btn-link btn-primary btn-lg">
                                   <i class="fa fa-edit">Sửa</i>
                                 </button>
                                 <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
@@ -464,7 +474,8 @@
         modal.data('lecture-id', button.closest('tr').find('td:first').text().trim());
 
         ['lectureNameEdit', 'courseInfoEdit', 'imageEdit', 'titleEdit', 'contentEdit', 'videoUrlEdit'].forEach(id => {
-          const value = button.data(id.replace(/([A-Z])/g, '-$1').toLowerCase());
+          const dataAttribute = id.replace(/([A-Z])/g, '-$1').toLowerCase();
+          const value = button.data(dataAttribute);
           console.log(`Setting ${id} to ${value}`);
           modal.find(`#${id}`).val(value);
         });

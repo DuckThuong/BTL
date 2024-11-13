@@ -103,10 +103,6 @@
         <label>Ngày cập nhật:</label>
         <input type="text" value="@Model.UpdatedAt?.ToString("yyyy-MM-dd")" class="form-control" readonly />
     </div>
-    <div class="form-group">
-        <label>Lần đăng nhập cuối:</label>
-        <input type="text" value="@Model.LastLogin?.ToString("yyyy-MM-dd")" class="form-control" readonly />
-    </div>
     <div class="text-right" style="margin-top: 40px; margin-bottom: 80px;">
         <button type="submit" class="btn btn-primary" id="saveBtn" style="display:none;">Lưu</button>
         <button type="button" class="btn btn-secondary" id="editBtn">Chỉnh sửa</button>
@@ -116,14 +112,16 @@
 <div id="successMessage" class="alert alert-success" style="display:none;"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    document.getElementById('editBtn').onclick = function () {
-        var inputs = document.querySelectorAll('#profileForm input, #profileForm textarea');
-        inputs.forEach(function (input) {
-            input.disabled = false;
-        });
-        document.getElementById('saveBtn').style.display = 'inline-block';
-        this.style.display = 'none';
-    };
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('editBtn').onclick = function () {
+            var inputs = document.querySelectorAll('#profileForm input, #profileForm textarea, #profileForm select');
+            inputs.forEach(function (input) {
+                input.disabled = false;
+            });
+            document.getElementById('saveBtn').style.display = 'inline-block';
+            this.style.display = 'none';
+        };
+    });
 
     function updateUser( username, email, fullName, gender, birthYear, address, phoneNumber, profilePicture, nationality, occupation, bio, interests, role) {
         const userData = {

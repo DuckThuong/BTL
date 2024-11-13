@@ -38,42 +38,43 @@ namespace BTL.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(User model)
         {
-            if (!ModelState.IsValid){
-
-                return View("Login");
-            }else{
-
-            var user = await _context.Users
-                .FirstOrDefaultAsync(u => u.Email == model.Email);
-
-            if (user == null)
+            if (!ModelState.IsValid)
             {
-                ModelState.AddModelError(string.Empty, "Không tìm thấy tài khoản");
                 return View("Login");
             }
-
-            if (user.PasswordHash != model.PasswordHash) 
+            else
             {
-                ModelState.AddModelError(string.Empty, "Không thể đăng nhập");
-                return View("Login");
+                var user = await _context.Users
+                    .FirstOrDefaultAsync(u => u.Email == model.Email);
+
+                if (user == null)
+                {
+                    ModelState.AddModelError(string.Empty, "Email không đúng");
+                    return View("Login");
+                }
+
+                if (user.PasswordHash != model.PasswordHash) 
+                {
+                    ModelState.AddModelError(string.Empty, "Mật khẩu không đúng");
+                    return View("Login");
+                }
+
+                var userId = await BTL.Data.User.GetUserIdByEmailAsync(_context, model.Email);
+                var userRole = await BTL.Data.User.GetUserRoleByIdAsync(_context, (int)userId);
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.Email),
+                    new Claim("UserId", user.UserId.ToString())
+                };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+                HttpContext.Session.SetString("UserId", userId.ToString());
+                HttpContext.Session.SetString("UserRole", userRole);
+
+                return RedirectToAction("Index", "Home");
             }
-            var userId = await BTL.Data.User.GetUserIdByEmailAsync(_context, model.Email);
-            var userRole = await BTL.Data.User.GetUserRoleByIdAsync(_context, (int)userId);
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, user.Email),
-                new Claim("UserId", user.UserId.ToString())
-            };
-
-            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
-            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
-            HttpContext.Session.SetString("UserId", userId.ToString());
-            HttpContext.Session.SetString("UserRole", userRole);
-
-            return RedirectToAction("Index", "Home");
-            }
-
         }
 
         [HttpPost]

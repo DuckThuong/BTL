@@ -156,5 +156,29 @@
          });
      </script>
  *@
+
+    <script>
+        $(document).ready(function() {
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <text>
+                    var errors = [];
+                </text>
+                @foreach (var modelState in ViewData.ModelState.Values)
+                {
+                    foreach (var error in modelState.Errors)
+                    {
+                        <text>errors.push("@error.ErrorMessage");</text>
+                    }
+                }
+                <text>
+                    if (errors.length > 0) {
+                        var errorMessage = "Sai tài khoản hoặc mật khẩu \n" ;
+                        alert(errorMessage);
+                    }
+                </text>
+            }
+        });
+    </script>
 </body>
 </html>
